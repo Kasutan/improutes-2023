@@ -1,0 +1,233 @@
+/* darker-grotesque-300 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Darker Grotesque';
+	font-style: normal;
+	font-weight: 300;
+	src: url('fonts/darker-grotesque-v8-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* darker-grotesque-regular - latin */
+  @font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Darker Grotesque';
+	font-style: normal;
+	font-weight: 400;
+	src: url('fonts/darker-grotesque-v8-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* darker-grotesque-500 - latin */
+  @font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Darker Grotesque';
+	font-style: normal;
+	font-weight: 500;
+	src: url('fonts/darker-grotesque-v8-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* darker-grotesque-600 - latin */
+  @font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Darker Grotesque';
+	font-style: normal;
+	font-weight: 600;
+	src: url('fonts/darker-grotesque-v8-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* darker-grotesque-700 - latin */
+  @font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Darker Grotesque';
+	font-style: normal;
+	font-weight: 700;
+	src: url('fonts/darker-grotesque-v8-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* darker-grotesque-800 - latin */
+  @font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Darker Grotesque';
+	font-style: normal;
+	font-weight: 800;
+	src: url('fonts/darker-grotesque-v8-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+
+:root {
+	--padding-lien: 7px 12px;
+}
+
+
+html {
+	font-size: 62.5%;
+	/* 1rem = 10px */
+	--taille-texte: 1.5rem;
+	--font-texte: "Darker Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--font-titre: var(--font-texte);
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: map-get($colors, 'texte'); //si les variables css ne sont pas supportées
+	color: var(--texte);
+	font-family: "Darker Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: var(--font-texte);
+	font-size: 1.6rem; //si les variables css ne sont pas supportées
+	font-size: var(--taille-texte);
+	font-weight: 400;
+	line-height: 1.18;
+	-webkit-font-smoothing: antialiased;
+}
+
+::selection {
+	background: var(--vert);
+	color: var(--blanc);
+}
+
+strong,
+b {
+	font-weight: 700;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+
+h1,
+.h1,
+h2,
+h3,
+h4,
+.h2,
+.h3,
+.h4 {
+	font-family: var(--font-titre);
+	font-weight: 700;
+	padding: 0;
+}
+
+h1,
+.h1 {
+	color: var(--orange-imp);
+	font-size: 3.2rem;
+	margin: 0;
+	@include decor-sous-titre;
+}
+
+
+h2,
+.h2 {
+	font-size: 3.2rem;
+	margin: 0 0 0.5em;
+	
+}
+
+h3,
+.h3 {
+	font-size: 2.5rem;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+
+
+p {
+	margin-bottom: 1em;
+	margin-top: 0;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	border-left: solid 5px var(--orange);
+	font-size: 1.2em;
+	margin: 0 0 1em;
+	padding: 5px 27px;
+
+	cite {
+		font-weight: 700;
+	}
+}
+
+mark,
+ins {
+	background: var(--fond);
+	text-decoration: none;
+}
+
+small,
+.has-small-font-size {
+	font-size: 80%;
+}
+
+.has-regular-font-size {
+	font-size: 120%;
+}
+
+big,
+.has-big-font-size {
+	font-size: 2.5rem;
+
+}
+
+.has-huge-font-size {
+	font-size: 3.2rem;
+}
+
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	@include screen-reader-text;
+}
+
+.screen-reader-text:focus {
+	background-color: var(--fond);
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	display: block;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0s !important;
+		transition-duration: 0s !important;
+	}
+}

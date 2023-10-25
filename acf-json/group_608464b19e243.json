@@ -1,0 +1,82 @@
+{
+    "key": "group_608464b19e243",
+    "title": "En-tête de la page",
+    "fields": [
+        {
+            "key": "field_608464c388d03",
+            "label": "Image bannière",
+            "name": "improutes_banniere_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Format recommandé JPG. Taille recommandée : 1920px de large par 388px de haut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg, jpeg",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_63c5685afc810",
+            "label": "Masquer le titre de cette page ?",
+            "name": "improutes_masquer_titre",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "oui": "oui",
+                "non": "non"
+            },
+            "default_value": "non",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1673881753
+}
