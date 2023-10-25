@@ -258,63 +258,63 @@ button.menu-toggle {
 .nav-main { 
 
 	& , .nav-primary, .menu {
+		height:100%;
 		width:100%;
 	}
 
 	.menu {
 		align-items: stretch;
-		justify-content: space-between;
-		column-gap:5px;
+		justify-content: flex-end;
 		li {
-			padding:0;
-
+			transition: all var(--transition);
 			&.disable > a {
 				cursor:default;
 			}
 		}
 
 		a {
-			color:var(--vert);
+			color:var(--rouge-texte);
 			display: block;
+			font-size: 1.8rem;
+			font-weight: 500;
 			text-decoration: none;
 		}
 
 		//styles spécifiques aux liens de premier niveau
 
 		& > li {
+			padding:4.5rem 0 0;
 			& > a {
-				align-items: center;
-				display: flex;
-				font-weight: 700;
-				height: 100%;
-				//margin-bottom: 0.7rem;
-				padding:0.8rem 1rem;
+				border-right:solid 1px var(--orange-cadre);
+				padding:0 1rem 0.5rem;
 				position:relative;
 				text-align: center;
-				text-decoration: none;
-				text-transform: uppercase;
 			}
 			
-			&:hover > a, & > a:focus, &:focus-within > a {
-				background-color: var(--vert);
-				color:var(--blanc);
-			}
-			
-
-			& > a:active, &.current-menu-item > a, &.current-menu-ancestor > a, 
-			&.current_page_parent > a {
-				background-color: var(--rouge);
-				color:var(--blanc);
-			}
-
-			//Couleur différente pour le lien vers l'accueil
-			//TODO : vérifier rouge ou vert
-			/*
-			&:first-of-type {
-				&:hover > a, & > a:focus, &:focus-within > a, &.current-menu-item > a {
-					background-color: var(--rouge);
+			&:last-of-type {
+				& > a {
+					border-right:none;
 				}
-			}*/
+			}
+
+			&:hover, &:focus-within {
+				background-color: var(--orange);
+				& > a {
+					color:var(--blanc);
+				}
+			}
+			
+
+			&.current-menu-item, &.current-menu-ancestor, 
+			&.current_page_parent {
+				background-color: var(--orange);
+				& > a {
+					color:var(--blanc);
+					font-weight: 700;
+				}
+			}
+
+			
 
 		}
 
@@ -360,21 +360,17 @@ button.menu-toggle {
 				padding:0;
 			}
 			a {
-				color:var(--vert);
 				display: block;
-				font-weight: 700;
-				line-height:1.1;
-				padding : 1.5rem;
+				padding : 0.8rem 1.5rem 1.3rem;
 				transition: all var(--transition);
 				&:hover, &:focus {
 					color:var(--blanc);
-					background-color: var(--vert);
+					background-color: var(--orange);
 				}
 			}
 			li.current-menu-item a {
-				background-color: var(--rouge);
+				background-color: var(--orange);
 				color:var(--blanc);
-
 			}
 		}
 	}

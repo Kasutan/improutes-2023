@@ -46,7 +46,7 @@
 	.main-header {
 		--taille-logos:25.4rem;
 
-		padding:0 var(--padding-x); //TODO remettre un padding-x-header entre lg et xl ?
+		padding:0 var(--padding-x);
 	}
 	.title-area {
 		max-width: var(--taille-logo);
@@ -56,7 +56,6 @@
 		column-gap:16px;
 	}
 	.header-navigation {
-		background-color: var(--orange-fond);
 		height:100%;
 	}
 
