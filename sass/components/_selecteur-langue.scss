@@ -2,7 +2,6 @@
 	a {
 		align-items: center;
 		display: flex;
-
 		text-decoration: none;
 		text-transform: uppercase;
 
@@ -12,9 +11,17 @@
 		}
 		span {
 			display: block;
+			font-size: 1rem;
 			margin:0;
 			position:relative;
-			top:-2px;
+			top:-1px;
 		}
 	}
+}
+
+.topbar .selecteur {
+	a {
+		color:var(--blanc);
+	}
+
 }

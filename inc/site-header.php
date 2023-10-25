@@ -14,12 +14,12 @@ function kasutan_header_top() {
 		$placeholder="Search";
 	}
 
-	printf('<form role="search" method="get" class="search-form" action="/" aria-label="%s">
+	printf('<form role="search" method="get" class="search-form search-topbar" action="/" aria-label="%s">
 			<label>
 				<span class="screen-reader-text">%s</span>
 				<input class="search-field" 
 				placeholder="%s" value="" name="s" type="search"></label>
-			<input class="search-submit screen-reader-text" value="%s" type="submit">
+			<input class="search-submit" value="%s" type="submit">
 		</form>',
 		$aria,
 		$label,

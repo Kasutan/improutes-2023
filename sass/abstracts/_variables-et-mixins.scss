@@ -101,8 +101,8 @@ $colors: (
 	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
-@mixin placeholder {
-	color:#727272;
+@mixin placeholder-search {
+	color:#fff;
 	opacity:1;
 }
 
