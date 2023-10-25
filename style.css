@@ -1067,7 +1067,7 @@ a.wp-block-button__link {
   padding: 0.7rem 1.3rem;
   text-align: center;
   vertical-align: middle;
-  background: var(--fond-bouton);
+  background-color: var(--fond-bouton);
   text-decoration: none;
   transition: all var(--transition);
 }
@@ -1103,6 +1103,25 @@ input[type=submit].blanc.has-rouge-color,
 a.bouton.blanc.has-rouge-color,
 a.wp-block-button__link.blanc.has-rouge-color {
   --texte-bouton:var(--rouge);
+}
+button.pdf,
+input[type=button].pdf,
+input[type=reset].pdf,
+input[type=submit].pdf,
+a.bouton.pdf,
+a.wp-block-button__link.pdf {
+  --fond-bouton:transparent;
+  --fond-bouton-hover:transparent;
+  --texte-bouton:var(--blanc);
+  background-image: url("icons/download.svg");
+  background-repeat: no-repeat;
+  background-size: 25px 20px;
+  background-position: 5px center;
+  border: solid 1px var(--blanc);
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 9px 0;
+  padding: 3px 10px 3px 32px;
 }
 button, button:visited,
 input[type=button],
@@ -1156,7 +1175,7 @@ a.wp-block-button__link:disabled {
   background-color: lightgrey;
 }
 
-a.bouton {
+a.bouton:not(.pdf) {
   display: block;
   margin: 5rem auto;
   width: 22.2rem;

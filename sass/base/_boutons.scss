@@ -22,10 +22,26 @@ a.wp-block-button__link {
 			--texte-bouton:var(--rouge);
 		}
 	}
+	&.pdf {
+		--fond-bouton:transparent;
+		--fond-bouton-hover:transparent;
+		--texte-bouton:var(--blanc);
+		background-image: url('icons/download.svg');
+		background-repeat: no-repeat;
+		background-size: 25px 20px;
+		background-position: 5px center;
+		border:solid 1px var(--blanc);
+		font-size: 1.6rem;
+		font-weight: 500;
+		margin:9px 0;
+		padding:3px 10px 3px 32px;
+
+	}
+
 
 	@include bouton;
  
-	background: var(--fond-bouton);
+	background-color: var(--fond-bouton);
 	&, &:visited {
 		color: var(--texte-bouton);
 	}
@@ -49,7 +65,7 @@ a.wp-block-button__link {
 	
 }
 
-a.bouton {
+a.bouton:not(.pdf) {
 	display: block;
 	margin:5rem auto;
 	width:22.2rem;
