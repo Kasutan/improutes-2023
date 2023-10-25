@@ -5,7 +5,7 @@
         {
             "key": "field_653928f8ec7b6",
             "label": "Premier logo",
-            "name": "logo_1",
+            "name": "improutes_logo_1",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -30,7 +30,7 @@
         {
             "key": "field_65392904ec7b7",
             "label": "Deuxième logo",
-            "name": "logo_2",
+            "name": "improutes_logo_2",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -142,5 +142,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698244951
+    "modified": 1698250859
 }

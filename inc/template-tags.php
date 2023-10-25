@@ -9,6 +9,39 @@
 **/
 
 
+/**
+ * Logos pour l'en-tête et le pied de page
+ *
+ */
+
+function kasutan_affiche_logos($classe='') {
+	$url="/";
+	if(KPLL && pll_current_language()=='en') {
+		$url="/en";
+	}
+	$logo_1=$logo_2=false;
+	if(function_exists('get_field')) {
+		$logo_1=esc_attr(get_field('improutes_logo_1','option'));
+		$logo_2=esc_attr(get_field('improutes_logo_2','option'));
+	}
+	if(!$logo_1 && !$logo_2) {
+		$logo_1=get_theme_mod( 'custom_logo' );
+	}
+	if($logo_1) {
+		$tag_2='';
+		if($logo_2) {
+			$tag_2=wp_get_attachment_image($logo_2,'medium');
+		}
+		printf('<a class="%s" href="%s">%s%s</a>',
+			$classe,$url,wp_get_attachment_image($logo_1,'medium'),$tag_2
+		);
+	} else {
+		printf('<a class="%s" href="%s">%s</a>',
+		$classe,$url,get_bloginfo('name')
+	);
+	}
+
+}
 
 /**
  * Entry Category

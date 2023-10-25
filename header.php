@@ -32,26 +32,20 @@ echo '<div class="site-container">';
 	echo '<a class="skip-link screen-reader-text" href="#main-content">' . esc_html__( 'Aller directement au contenu', 'improutes' ) . '</a>';
 		tha_header_top();
 
-		echo '<div class="title-area">';
-		$logo_tag='p';
-		
-		if(has_custom_logo()) {
-			printf('<%s class="site-title">%s<span class="screen-reader-text">%s</span></%s>',
-				$logo_tag,
-				get_custom_logo(),	
-				get_bloginfo( 'name'),
-				$logo_tag,	
-			);
-		} else {
-			printf('<%s class="site-title">%s</%s>',
-				$logo_tag,
-				get_bloginfo( 'name'),
-				$logo_tag,	
-			);
-		}
-			
-		echo '</div>';
+			echo '<div class="main-header">';
 
+				echo '<div class="title-area">';
+					if(function_exists('kasutan_affiche_logos')) {
+						kasutan_affiche_logos("site-title");
+					}
+				echo '</div>';
+
+				if(function_exists('kasutan_navigation')) {
+					kasutan_navigation();
+				}
+
+			echo '</div>';
+			
 		tha_header_bottom();
 	echo '</header>';
 	tha_header_after();

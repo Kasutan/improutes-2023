@@ -18,59 +18,55 @@
 
 }
 .site-header {
-
-	--taille-logo:13rem;
-	
-	align-items: center;
 	background-color: var(--blanc);
-	//display: grid;
-	grid-template-columns: 1fr var(--taille-logo) 1fr;
-	justify-content: space-between;
-	padding: 10px var(--padding-x-header);
-	position: relative;
 	z-index:10;
-
-	.site-branding, .menu-toggle {
-		position: relative;
-	}
-
-	@include bp(md) {
-	}
-	@include bp(lg) {
-	}
-
 }
 
-.title-area {
-	grid-column: 2;
+.main-header {
+	--taille-logos:25rem;
+	align-items: center;
+	display: grid;
+	grid-template-columns: var(--taille-logos) 1fr;
+	padding:22px;
+	position: relative;
 }
-
 
 .site-title {
+	column-gap:12px;
+	display:grid;
+	grid-template-columns: 93px 150px;
 	margin:0;
 }
-
-.custom-logo-link {
-	display: inline-block;
-}
-
-.custom-logo {
-	display: block;
-	margin:0;
-}
-
 .header-navigation {
 	justify-self: end;
-	grid-column: 3;
 }
 
-.acces-client {
-	display: none;
+
+@include bp(lg) {
+	.main-header {
+		--taille-logos:25.4rem;
+
+		padding:0 var(--padding-x); //TODO remettre un padding-x-header entre lg et xl ?
+	}
+	.title-area {
+		max-width: var(--taille-logo);
+		padding:22px 0;
+	}
+	.site-title {
+		column-gap:16px;
+	}
+	.header-navigation {
+		background-color: var(--orange-fond);
+		height:100%;
+	}
+
+	
+
 }
 
 //Header sticky toutes tailles d'écran
 .site-header.js-sticky {
-	//box-shadow: 0 3px 3px rgba(18,75,90,0.2);
+	box-shadow: 0 3px 3px rgba(18,75,90,0.2);
 	position:fixed;
 	left: 0;
 	top: 0;
@@ -87,57 +83,12 @@
 }
 .admin-bar .site-header.js-sticky {
 	top:46px;
+	@include bp(md) {
+		top:32px;
+	}
 }	
 
 
-@include bp(md) {
-	.site-header {
-		--taille-logo:15rem;
-	}
-
-	.admin-bar .site-header.js-sticky {
-		top:32px;
-	}
-
-	
-}
-
-@include bp(lg) {
-	.site-header {
-		--taille-logo:17.7rem;
-		//display: flex;
-		flex-direction: column;
-		padding:20px var(--padding-x-header) 10px;
-
-	}
-	.title-area {
-		max-width: var(--taille-logo);
-	}
-	.header-navigation {
-		width:100%;
-	}
-
-	a.acces-client {
-		background-color: var(--orange);
-		@include box-shadow;
-		border-bottom-left-radius: 5px;
-		border-bottom-right-radius: 5px;
-		color:var(--blanc);
-		display: block;
-		@include fs(12);
-		font-weight: 700;
-		padding:1rem;
-		position: absolute;
-		right:var(--padding-x-header);
-		text-decoration: none;
-		text-transform:uppercase;
-		top:0;
-		&:hover, &:focus {
-			text-decoration: underline;
-		}
-	}
-
-}
 
 /*--------------------------------------------------------------
 ## Ancre pour backtotop
