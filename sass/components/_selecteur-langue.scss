@@ -1,0 +1,20 @@
+.selecteur {
+	a {
+		align-items: center;
+		display: flex;
+
+		text-decoration: none;
+		text-transform: uppercase;
+
+		img {
+			margin-right: 7px;
+			width:25px;
+		}
+		span {
+			display: block;
+			margin:0;
+			position:relative;
+			top:-2px;
+		}
+	}
+}

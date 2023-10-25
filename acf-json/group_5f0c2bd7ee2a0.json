@@ -3,6 +3,56 @@
     "title": "Options générales",
     "fields": [
         {
+            "key": "field_653928f8ec7b6",
+            "label": "Premier logo",
+            "name": "logo_1",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_65392904ec7b7",
+            "label": "Deuxième logo",
+            "name": "logo_2",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png",
+            "preview_size": "thumbnail"
+        },
+        {
             "key": "field_608ac16ae3a8c",
             "label": "Page des actualités",
             "name": "page_actualites",
@@ -72,22 +122,6 @@
             "max_size": "",
             "mime_types": "jpg, jpeg",
             "preview_size": "thumbnail"
-        },
-        {
-            "key": "field_63bd3e8fc525b",
-            "label": "Lien vers l'accès client dans l'en-tête",
-            "name": "improutes_acces_client",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
         }
     ],
     "location": [
@@ -108,5 +142,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673347784
+    "modified": 1698244951
 }

@@ -1,12 +1,32 @@
 /*--------------------------------------------------------------
 ## Site header
 --------------------------------------------------------------*/
+.topbar {
+	align-items: center;
+	background-color: var(--orange);
+	display: flex;
+	justify-content: flex-end;
+	padding:5px var(--padding-x);
+	.search-form {
+		margin-right: 20px;
+		@include bp(lg) {
+			margin-right: 38px;
+		}
+	}
+
+	a {
+		color:var(--blanc);
+	}
+
+
+}
 .site-header {
+
 	--taille-logo:13rem;
 	
 	align-items: center;
 	background-color: var(--blanc);
-	display: grid;
+	//display: grid;
 	grid-template-columns: 1fr var(--taille-logo) 1fr;
 	justify-content: space-between;
 	padding: 10px var(--padding-x-header);
@@ -88,7 +108,7 @@
 @include bp(lg) {
 	.site-header {
 		--taille-logo:17.7rem;
-		display: flex;
+		//display: flex;
 		flex-direction: column;
 		padding:20px var(--padding-x-header) 10px;
 
