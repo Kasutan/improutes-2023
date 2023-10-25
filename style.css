@@ -1546,18 +1546,21 @@ a:focus-visible {
 ## Fil d'ariane
 --------------------------------------------------------------*/
 p.fil-ariane {
+  display: none;
   align-items: center;
-  display: flex;
-  color: var(--rouge);
+  color: var(--gris-1);
   flex-wrap: wrap;
-  font-weight: 700;
-  font-size: calc(12 * var(--taille-texte) / 15);
+  font-weight: 600;
+  font-size: 1.6rem;
   margin-top: 14px;
-  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  p.fil-ariane {
+    display: flex;
+  }
 }
 p.fil-ariane a {
-  color: var(--rouge);
-  font-weight: 700;
+  color: var(--gris-1);
   text-decoration: none;
 }
 p.fil-ariane a:hover, p.fil-ariane a:focus {
@@ -1566,6 +1569,9 @@ p.fil-ariane a:hover, p.fil-ariane a:focus {
 p.fil-ariane .sep {
   display: inline-block;
   margin: 0 0.5ch;
+}
+p.fil-ariane .current {
+  color: var(--orange-imp);
 }
 
 /*--------------------------------------------------------------
@@ -2069,7 +2075,12 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 }
 
 .entry-title {
-  text-align: center;
+  margin-top: 5.2rem;
+}
+@media (min-width: 1024px) {
+  .entry-title {
+    margin-top: 7.2rem;
+  }
 }
 
 /*--------------------------------------------------------------

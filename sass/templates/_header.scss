@@ -119,6 +119,9 @@
 }
 
 .entry-title {
-	text-align: center;
+	margin-top: 5.2rem;
+	@include bp(lg) {
+		margin-top: 7.2rem;
+	}
 }
 

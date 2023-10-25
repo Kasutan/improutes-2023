@@ -45,17 +45,18 @@ a:focus-visible {
 ## Fil d'ariane
 --------------------------------------------------------------*/
 p.fil-ariane {
+	display: none;
+	@include bp(md) {
+		display:flex;
+	}
 	align-items: center;
-	display:flex;
-	color:var(--rouge);
+	color:var(--gris-1);
 	flex-wrap: wrap;
-	font-weight: 700;
-	@include fs(12);
+	font-weight: 600;
+	font-size: 1.6rem;
 	margin-top: 14px;
-	text-transform: uppercase;
 	a {
-		color:var(--rouge);
-		font-weight: 700;
+		color:var(--gris-1);
 		text-decoration: none;
 		&:hover, &:focus {
 			text-decoration: underline;
@@ -65,6 +66,9 @@ p.fil-ariane {
 	.sep {
 		display: inline-block;
 		margin:0 0.5ch;
+	}
+	.current {
+		color:var(--orange-imp);
 	}
 }
 /*--------------------------------------------------------------
