@@ -714,7 +714,7 @@ body {
 }
 @supports (height: clamp(560px, 78vw, 1083px)) {
   :root {
-    --hauteur-banniere:clamp(154px,36vw,381px);
+    --hauteur-banniere:clamp(154px,26vw,381px);
   }
 }
 @media (min-width: 550px) {

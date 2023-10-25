@@ -26,7 +26,7 @@ body {
 	--hauteur-bannier-home:450px;
 	
 	@supports(height:clamp(560px,78vw,1083px)) {
-		--hauteur-banniere :clamp(154px,36vw,381px);
+		--hauteur-banniere :clamp(154px,26vw,381px);
 	}
 
 
