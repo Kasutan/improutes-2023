@@ -73,7 +73,7 @@ p.fil-ariane {
 
 /*Logique pour afficher/masquer éléments du menu mobile et sous-menus*/ 
 
-.topbar, .nav-main, .volet-navigation {
+.nav-main, .volet-navigation {
 	display: none; // tous les menus sont cachés en mobile
 	.menu {
 		display: flex;
@@ -85,16 +85,14 @@ p.fil-ariane {
 
 button.menu-toggle {
 	display: block;
-	height:4rem;
+	height:3.5rem;
 	padding:0;
-	width:4rem;
+	width:3.5rem;
 	svg {
 		height:100%;
 		width:100%;
 	}
-	svg path {
-		fill:var(--vert);
-	}
+
 	&:focus {
 		outline: none;
 	}
@@ -118,20 +116,17 @@ button.menu-toggle {
 	display: flex;
 	flex-direction: column;
 	right:0;
-	max-height:calc(100vh - 93px); //magic number : hauteur du header sticky
+	max-height:calc(100vh - 129px); //magic number : hauteur du header sticky
+	max-width:40rem;
 	overflow-x:hidden;
 	overflow-y:auto;
 	padding: 0;
 	position:absolute;
-	top:calc(100% - 25px); //chevaucher un peu le logo
-	width:30rem;
+	top:100%;
+	width:100%;
 	z-index: 10;
 }
-@include bp(md) {
-	.topbar { 
-		display:flex;
-	}
-}
+
 @include bp(lg) { 
 	button.menu-toggle {
 		display: none;
@@ -153,9 +148,11 @@ button.menu-toggle {
 	&:hover, &:focus, &:active {
 		background:transparent;
 	}
+
 	svg path {
-		fill : var(--blanc);
+		fill:var(--orange);
 	}
+	
 }
 
 /* Style liens de menu VOLET NAVIGATION MOBILE */
@@ -196,7 +193,7 @@ button.menu-toggle {
 	/*Styles éléments de niveau 1*/
 	.menu-mobile > li {
 		align-items: center;
-		border-bottom:solid 1px var(--bordure);
+		border-bottom:solid 1px var(--orange-cadre);
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -205,14 +202,13 @@ button.menu-toggle {
 			border:none;
 		}
 		> a {
-			color:var(--vert);
+			color:var(--rouge-texte);
 			flex:auto 0 0;
 			padding:1rem 1.6rem;
-			text-transform: uppercase;
 		}
 
 		&.current-menu-item , &.current-menu-ancestor, &.current_page_parent {
-			background-color: var(--vert);
+			background-color: var(--orange);
 			& > a {
 				color:var(--blanc);
 			}
@@ -231,7 +227,7 @@ button.menu-toggle {
 		position: relative;
 		top:2px;
 		svg path {
-			fill:var(--vert);
+			fill:var(--rouge-texte);
 		}
 		&:focus {
 			outline: none;
@@ -247,11 +243,11 @@ button.menu-toggle {
 			margin-bottom: 0.8rem;
 
 			a {
-				color : #505050;
+				color : var(--gris-1);
 			}
 
 			&.current-menu-item a {
-				color:var(--vert);
+				color:var(--orange);
 			}
 		}
 	}
