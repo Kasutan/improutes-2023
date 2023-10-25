@@ -10,11 +10,10 @@ body {
 	overflow-x:hidden;
 }
 :root {
-	--margin-y-1: 3rem;
-	--margin-y-2: 6rem;
-	--padding-x:20px;
-	--padding-x-header:20px;
-	--padding-x-decor:var(--padding-x);
+	--margin-y:4.5rem;
+	--padding-y-1: 3rem;
+	--padding-y-2: 6rem;
+	--padding-x:2.5px;
 	--padding-x-pleine-largeur:0;
 	--largeur-max:1920px;
 	--hauteur-h1:84px;
@@ -23,25 +22,25 @@ body {
 	//--max-width-xl:1900px;
 
 	/*Valeurs en dur pour les navigateurs qui ne supportent pas clamp*/
-	--hauteur-banniere :400px; 
+	--hauteur-banniere :381px; 
+	--hauteur-bannier-home:450px;
 	
 	@supports(height:clamp(560px,78vw,1083px)) {
-		--hauteur-banniere :clamp(220px,28vw,550px);
+		--hauteur-banniere :clamp(154px,36vw,381px);
 	}
 
 
-	@include bp(lg) {
-		--padding-x : 10vw;
-		--padding-x-header:5vw;
+	@include bp(sm) {
+		--padding-x : 4.6vw;
 	}
 	
-	@include bp(xl) {
-		--padding-x: calc(50vw - 1114px/2);
-		--padding-x-header:var(--padding-x);
+	@include bp(lg) {
+		--padding-x: calc(50vw - 930px/2);
+		--margin-y:9rem;
 	}
 
 	@include bp(xxl) {
-		--padding-x: calc((var(--largeur-max) - 1114px)/2);
+		--padding-x: calc((var(--largeur-max) - 930px)/2);
 		--padding-x-pleine-largeur : calc(50vw - var(--largeur-max)/2);
 	}
 }
