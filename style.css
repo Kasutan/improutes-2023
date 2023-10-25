@@ -1509,8 +1509,6 @@ object {
 
 a,
 a:visited {
-  color: var(--rouge);
-  font-weight: 600;
   text-decoration: underline;
   transition: all var(--transition);
 }
