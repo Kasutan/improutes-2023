@@ -173,7 +173,7 @@ function kasutan_fil_ariane() {
 
 	
 	//Pour tous les contenus : afficher en premier le lien vers l'accueil du site
-	$accueil=get_option('page_on_front');
+	$accueil=get_option('page_on_front'); //Traduit par PLL ✔️
 	printf('<a href="%s">%s</a><span class="sep">></span>',
 		get_the_permalink( $accueil),
 		strip_tags(get_the_title($accueil))
@@ -184,7 +184,7 @@ function kasutan_fil_ariane() {
 	//Afficher la page des actualités pour les articles (single ou archive de catégorie ou archive des articles ou archive de tag)
 	if ( (is_single() && 'post' === $post_type) || is_category() || is_tag() ) :
 		//l'ID de la page est stockée dans les options du site
-		$actus=get_option('page_for_posts'); 
+		$actus=get_option('page_for_posts'); //Traduit par PLL ✔️
 		if($actus) :
 			printf('<a href="%s">%s</a><span class="sep">></span>',
 				get_the_permalink( $actus),
