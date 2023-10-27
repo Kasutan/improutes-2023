@@ -223,15 +223,6 @@ class BE_ACF_Customizations {
 			array('blog', 'article', 'accueil')
 		);
 
-		/*********Bloc newsletter ***************/
-		$this->helper_register_block_type( 
-			'newsletter',
-			'Bloc inscription newsletter',
-			'Section avec titre, formulaire et image de fond pour la page d\'accueil.',
-			'art', 
-			false,
-			array('newsletter', 'formulaire', 'accueil')
-		);
 
 		/*********Bloc carrousel de logos ***************/
 		$this->helper_register_block_type( 

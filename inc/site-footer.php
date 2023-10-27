@@ -2,9 +2,52 @@
 
 
 /**
- * Formulaire newsletter + menus + logos Footer
+ * Formulaire newsletter
  *
  */
+
+add_action('tha_footer_before','kasutan_footer_before');
+function kasutan_footer_before() {
+	if(!function_exists('get_field')) {
+		return;
+	}
+	$newsletter=get_field('improutes_newsletter','option');
+	$image_id=wp_kses_post( $newsletter['image'] );
+	$image_id_mobile=wp_kses_post( $newsletter['image_mobile'] );
+
+	if(KPLL && pll_current_language()=='en') {
+		$titre=wp_kses_post( $newsletter['titre_en'] );
+		$shortcode=wp_kses_post($newsletter['texte_en']) ;
+	} else {
+		$titre=wp_kses_post( $newsletter['titre'] );
+		$shortcode=wp_kses_post($newsletter['texte']) ;
+
+	}
+
+	printf('<section class="newsletter">');
+		echo '<div class="image desktop">';
+			echo wp_get_attachment_image( $image_id, 'banniere');
+		echo '</div>';
+		echo '<div class="image mobile">';
+			echo wp_get_attachment_image( $image_id_mobile, 'large');
+		echo '</div>';
+
+		echo '<div class="overlay"></div>';
+		
+		printf('<span class="titre-section">%s</span>',$titre);
+		
+		echo '<div class="form-wrap">';
+			echo do_shortcode($shortcode);
+		echo '</div>';
+
+	echo '</section>';
+}
+
+/**
+ * Menus + logos Footer + sélecteur de langues
+ *
+ */
+
 add_action( 'tha_footer_top', 'kasutan_main_footer' );
 function kasutan_main_footer() {
 
