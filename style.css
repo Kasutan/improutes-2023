@@ -1204,11 +1204,15 @@ hr {
   margin-bottom: 1.5em;
 }
 
+.entry-content p + ul:not([class]) {
+  margin-top: -1em;
+}
 .entry-content ul:not([class]) {
-  list-style: square;
+  list-style: disc;
+  list-style-position: inside;
 }
 .entry-content ul:not([class]) li {
-  margin-bottom: 1em;
+  margin-bottom: 0;
   /*&::before {
   	background-color: var(--vert);
   	content: ' ';
@@ -1219,7 +1223,7 @@ hr {
   }*/
 }
 .entry-content ul:not([class]) li::marker {
-  color: var(--vert);
+  color: var(--rouge);
 }
 
 /*

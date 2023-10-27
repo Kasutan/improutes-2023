@@ -17,20 +17,28 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-.entry-content ul:not([class]) {
-	list-style: square;
-	li {
-		margin-bottom: 1em;
-		/*&::before {
-			background-color: var(--vert);
-			content: ' ';
-			display: inline-block;
-			height: 5px;
-			margin-right: 4px;
-			width: 5px;
-		}*/
-		&::marker {
-			color: var(--vert);
+.entry-content {
+	p + ul:not([class]) {
+		margin-top: -1em;
+	}
+	
+	ul:not([class]) {
+		list-style: disc;
+		list-style-position: inside;
+
+		li {
+			margin-bottom: 0;
+			/*&::before {
+				background-color: var(--vert);
+				content: ' ';
+				display: inline-block;
+				height: 5px;
+				margin-right: 4px;
+				width: 5px;
+			}*/
+			&::marker {
+				color: var(--rouge);
+			}
 		}
 	}
 }
