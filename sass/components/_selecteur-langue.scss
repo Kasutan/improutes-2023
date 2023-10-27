@@ -25,3 +25,14 @@
 	}
 
 }
+
+.site-footer .selecteur {
+	display: flex;
+	justify-content: flex-end;
+	a {
+		font-size: 1.6rem;
+	}
+	span {
+		top:0;
+	}
+}
