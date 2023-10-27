@@ -1,131 +1,73 @@
 @import "./././sass/abstracts/variables-et-mixins";
 
 .colonnes-decor {
-	@include bleed;	
-	margin-bottom: 1rem;
-	overflow: hidden;
+	--gap:2rem;
+	--p:1.5rem;
+	--p2:calc(-1*var(--p));
+	margin-bottom: var(--margin-y);
 	.col-texte {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		padding:0 var(--padding-x) 15px;
+		margin-bottom: 3rem;
+	}
+	.col-image {
+		padding:var(--p);
 	}
 	.image {
+		aspect-ratio: 1;
+		margin:0 auto;
+		max-width:400px;
+		position: relative;
 		width:100%;
 		img {
+			height:100%;
 			object-fit: cover;
+			position: relative;
 			width:100%;
+			z-index: 1;
+		}
+
+		&::before, &::after {
+			background-color: var(--orange-cadre);
+			content:'';
+			display: block;
+			height: 69%;
+			left:var(--p2);
+			position: absolute;
+			top:var(--p2);
+			width:73%;
+		}
+
+		&::after {
+			bottom:var(--p2);
+			height:70%;
+			left:unset;
+			right:var(--p2);
+			top:unset;
+			width:20%;
 		}
 	}
-	.bloc {
-		color:var(--blanc);
-		font-weight: 700;
-		margin-bottom: 0;
-		padding:1rem 2rem;
-	}
-	.decor {
-		display: none;
-	}
-
-	&.rouge {
-		ul:not([class]) li::marker {
-					color:var(--rouge);
-		}
-	}
-
-	@include bp(sm) {
-		align-items: center;
+	
+	@include bp(md) {
+		column-gap:var(--gap);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		margin-bottom: 0;
-		&.gauche {
-			grid-auto-flow: dense;
-			.col-texte {
-				grid-column: 2;
-			}
-			.col-image {
-				grid-column: 1;
-			}
-		}
-	}
-
-	@include bp(md) {
-		padding:0 var(--padding-x);
 		.col-texte {
-			align-items: flex-start;
-			padding:0;
-			padding-bottom: 4rem;
-			padding-right:4rem;
-		}
-
-		&.gauche {
-			.col-texte {
-				padding:0;
-				padding-left:4rem;
-			}
-		}
-	}
-	@include bp(lg) {
-		align-items: stretch;
-		grid-template-columns: 55% 45%;
-		position: relative;
-		.col-texte {
-			padding-bottom: 6rem;
-			position: relative;
+			margin-bottom: 0;
 		}
 		.col-image {
-			position:relative;
+			margin-top: calc(-1 * var(--hauteur-h1));
 		}
-		.image {
-			height:100%;
-			padding-left:4rem;
-			padding-bottom: 3rem;
-			img {
-				height:100%;
-			}
-		}
-		.bloc {
-			bottom:5rem;
-			left:0;
-			position: absolute;
-			width:24.2rem;
-		}
+	}
 
-		&.gauche {
-			grid-template-columns: 45% 55%;
-			.image {
-				padding-left: 0;
-				padding-right: 4rem;
-			}
-			.bloc {
-				left : unset;
-				right:0;
-			}
-		}
-
-		.decor {
-			bottom:0;
-			display: block;
-			left:-10rem;
-			position: absolute;
-			path {
-				fill:var(--vert);
-				&.superpose {
-					fill:none;
-				}
-			}
-		}
-		&.rouge .decor path {
-			fill : var(--rouge);
-			&.superpose {
-				fill:none;
-			}
+	@include bp(lg) {
+		--p:2rem;
+		--gap:4.3rem;
+		.col-image {
+			margin-left:0;
+			margin-right: var(--p2);
+			max-width:unset;
 		}
 	}
 	@include bp(xl) {
-		.col-texte {
-			padding-bottom: 9rem;
-		}
 		
 	}
 }

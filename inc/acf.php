@@ -195,11 +195,11 @@ class BE_ACF_Customizations {
 		/*********Bloc colonnes-decor ***************/
 		$this->helper_register_block_type( 
 			'colonnes-decor',
-			'Bloc 2 colonnes avec décor',
-			'Section avec titre, texte, bouton dans une colonne, photo et bloc de texte dans une deuxième colonne, et décor en arrière-plan.',
+			'Bloc 2 colonnes avec image encadrée',
+			'Section une colonne de texte et une colonne contenant une image encadrée.',
 			'art', 
 			false,
-			array( 'colonne', 'decor', 'accueil')
+			array( 'colonne', 'image','decor','cadre','encadrée')
 		);
 
 		/*********Bloc colonnes-uni ***************/

@@ -1,14 +1,14 @@
 {
     "key": "group_63c69b2676723",
-    "title": "Bloc 2 colonnes avec décor",
+    "title": "Bloc 2 colonnes avec image encadrée",
     "fields": [
         {
-            "key": "field_63c69bc3fc548",
-            "label": "Couleur d'accent",
-            "name": "couleur",
+            "key": "field_653be1d1da075",
+            "label": "Bloc 2 colonnes avec image encadrée",
+            "name": "",
             "aria-label": "",
-            "type": "radio",
-            "instructions": "",
+            "type": "accordion",
+            "instructions": "Section une colonne de texte et une colonne contenant une image encadrée.\r\nEn desktop l'image est déplacée vers le haut pour s'aligner avec le titre de la page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,70 +16,18 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "vert": "vert",
-                "rouge": "rouge"
-            },
-            "default_value": "vert",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "vertical",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_63c69bedfc549",
-            "label": "Côté de l'image en desktop",
-            "name": "cote_image",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "droite": "droite",
-                "gauche": "gauche"
-            },
-            "default_value": "droite",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "vertical",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_63c69b267f0fd",
-            "label": "Titre",
-            "name": "titre",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
         },
         {
             "key": "field_63c69b75fc545",
-            "label": "Texte principal",
+            "label": "Colonne de texte",
             "name": "texte",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -91,22 +39,6 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
-        },
-        {
-            "key": "field_63c69b86fc546",
-            "label": "Bouton",
-            "name": "lien",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
         },
         {
             "key": "field_63c69b2682aa0",
@@ -132,26 +64,6 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "thumbnail"
-        },
-        {
-            "key": "field_63c69b9cfc547",
-            "label": "Texte du bloc sur fond coloré",
-            "name": "bloc",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "rows": 3,
-            "placeholder": "",
-            "new_lines": "br"
         }
     ],
     "location": [
@@ -172,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698421368
+    "modified": 1698423366
 }
