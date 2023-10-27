@@ -202,6 +202,17 @@ class BE_ACF_Customizations {
 			array( 'colonne', 'image','decor','cadre','encadrée')
 		);
 
+		/*********Bloc fond-colore ***************/
+		$this->helper_register_block_type( 
+			'fond-colore',
+			'Bloc texte sur fond coloré transparent avec image de fond',
+			'Section pleine largeur avec une zone de texte sur fond coloré transparent et une image pleine largeur en fond (deux versions).',
+			'art', 
+			false,
+			array( 'fond', 'colore', 'coloré','image')
+		);
+
+
 		/*********Bloc colonnes-uni ***************/
 		$this->helper_register_block_type( 
 			'colonnes-uni',

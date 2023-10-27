@@ -1,0 +1,79 @@
+.fond-colore {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: var(--margin-y);
+  position: relative;
+}
+@media (min-width: 1920px) {
+  .fond-colore {
+    width: var(--largeur-max);
+  }
+}
+.fond-colore .image {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.fond-colore .image.desktop {
+  display: none;
+}
+.fond-colore .image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  width: 100%;
+}
+.fond-colore .texte {
+  background-color: rgba(195, 71, 47, 0.8);
+  color: var(--blanc);
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 2rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+.fond-colore.flottant {
+  padding: 10.5rem var(--padding-x);
+}
+.fond-colore.flottant .texte {
+  margin-left: auto;
+  max-width: 68.4rem;
+}
+.fond-colore.flottant .texte h2 {
+  color: var(--orange-imp);
+}
+@media screen and (max-width: 767px) {
+  .fond-colore.gauche .texte {
+    background-color: var(--rouge);
+  }
+  .fond-colore.gauche .image {
+    height: auto;
+    position: relative;
+  }
+}
+@media (min-width: 768px) {
+  .fond-colore.gauche .texte {
+    max-width: 80%;
+    padding-left: var(--padding-x);
+  }
+}
+@media (min-width: 1024px) {
+  .fond-colore .image.desktop {
+    display: block;
+  }
+  .fond-colore .image.mobile {
+    display: none;
+  }
+  .fond-colore.flottant {
+    padding: 5.6rem var(--padding-x) 6.2rem;
+  }
+  .fond-colore.gauche .texte {
+    max-width: 50%;
+    padding-top: 5.6rem;
+    padding-bottom: 6rem;
+    padding-right: 4rem;
+  }
+}
