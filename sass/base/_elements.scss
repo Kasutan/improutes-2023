@@ -18,13 +18,14 @@ hr {
 }
 
 .entry-content {
-	p + ul:not([class]) {
+	p + ul:not([class]), p + ol:not([class]) {
 		margin-top: -1em;
 	}
-	
+
 	ul:not([class]) {
 		list-style: disc;
 		list-style-position: inside;
+		margin-bottom: 1em;
 
 		li {
 			margin-bottom: 0;
@@ -40,6 +41,12 @@ hr {
 				color: var(--rouge);
 			}
 		}
+	}
+
+	ol:not([class]) {
+		list-style: decimal;
+		padding-left: 2ch;
+		margin-bottom: 1em;
 	}
 }
 /*
