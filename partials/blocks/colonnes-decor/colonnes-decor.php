@@ -17,6 +17,9 @@ if(array_key_exists('className',$block)) {
 $texte=wp_kses_post( get_field('texte') );
 $image_id=esc_attr( get_field('image') );
 
+$className.= esc_attr(get_field('no_margin_bottom')) ? ' no-margin-bottom' : '';
+$className.= esc_attr(get_field('inverser_mobile')) ? ' inverser-mobile' : '';
+
 printf('<section class="acf colonnes-decor %s">', $className);
 	
 	echo '<div class="col-texte">';
@@ -24,9 +27,12 @@ printf('<section class="acf colonnes-decor %s">', $className);
 	echo '</div>';
 
 	echo '<div class="col-image">';
-		echo '<div class="image">';
-			echo wp_get_attachment_image( $image_id, 'large');
-		echo '</div>';
+		if($image_id) {
+			echo '<div class="image">';
+				echo wp_get_attachment_image( $image_id, 'large');
+			echo '</div>';
+		}
+		
 	echo '</div>';
 
 echo '</section>';

@@ -5,6 +5,7 @@
 	--p:1.5rem;
 	--p2:calc(-1*var(--p));
 	margin-bottom: var(--margin-y);
+
 	.col-texte {
 		margin-bottom: 3rem;
 	}
@@ -43,6 +44,19 @@
 			right:var(--p2);
 			top:unset;
 			width:20%;
+		}
+	}
+
+	@media screen and (max-width:767px) {
+		&.inverser-mobile {
+			display: flex;
+			flex-direction: column-reverse;
+			.col-texte {
+				margin-bottom: 0;
+			}
+			.col-image {
+				margin-bottom: 3rem;
+			}
 		}
 	}
 	

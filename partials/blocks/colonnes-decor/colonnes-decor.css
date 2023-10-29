@@ -42,6 +42,18 @@
   top: unset;
   width: 20%;
 }
+@media screen and (max-width: 767px) {
+  .colonnes-decor.inverser-mobile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .colonnes-decor.inverser-mobile .col-texte {
+    margin-bottom: 0;
+  }
+  .colonnes-decor.inverser-mobile .col-image {
+    margin-bottom: 3rem;
+  }
+}
 @media (min-width: 768px) {
   .colonnes-decor {
     column-gap: var(--gap);

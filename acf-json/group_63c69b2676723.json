@@ -8,7 +8,7 @@
             "name": "",
             "aria-label": "",
             "type": "accordion",
-            "instructions": "Section une colonne de texte et une colonne contenant une image encadrée.\r\nEn desktop l'image est déplacée vers le haut pour s'aligner avec le titre de la page.",
+            "instructions": "Section une colonne de texte (obligatoire) et une colonne contenant une image encadrée (facultative).\r\nEn desktop l'image (si elle est présente) est déplacée vers le haut pour s'aligner avec le titre de la page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -47,7 +47,7 @@
             "aria-label": "",
             "type": "image",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -64,6 +64,46 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_653e87deb9770",
+            "label": "Image au-dessus du texte en mobile",
+            "name": "inverser_mobile",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Cocher cette case pour placer l'image au-dessus du texte en mobile",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_653e8836f002f",
+            "label": "Supprimer la marge inférieure",
+            "name": "no_margin_bottom",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Cocher cette case pour supprimer la marge inférieure",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -84,5 +124,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698423366
+    "modified": 1698596969
 }
