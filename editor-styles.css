@@ -505,15 +505,17 @@ textarea {
   width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
-  padding: 0 var(--padding-x);
+  padding: 0;
 }
 @media (min-width: 1920px) {
   .wp-block-image.alignwide {
     width: var(--largeur-max);
   }
 }
-.wp-block-image.alignwide figcaption {
-  text-align: right;
+@media (min-width: 1024px) {
+  .wp-block-image.alignwide {
+    padding: 0 var(--padding-x);
+  }
 }
 
 .wp-block-code {
