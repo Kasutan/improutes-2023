@@ -1,10 +1,28 @@
 {
     "key": "group_63c6ab86b55ef",
-    "title": "Bloc 2 colonnes sur fond uni",
+    "title": "Bloc 2 colonnes sur fond coloré opaque",
     "fields": [
         {
+            "key": "field_653ea0896f10b",
+            "label": "Bloc 2 colonnes sur fond coloré opaque",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "Section pleine largeur sur fond coloré opaque avec texte dans une colonne et image dans une deuxième colonne (pour le bloc itinéraires).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
             "key": "field_63c6ab86ba6b7",
-            "label": "Couleur d'accent",
+            "label": "Couleur de fond",
             "name": "couleur",
             "aria-label": "",
             "type": "radio",
@@ -17,96 +35,17 @@
                 "id": ""
             },
             "choices": {
-                "vert": "vert",
-                "rouge": "rouge"
+                "rouge": "rouge",
+                "bleu": "bleu",
+                "orange": "orange",
+                "vert": "vert"
             },
-            "default_value": "vert",
+            "default_value": "rouge",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
             "layout": "vertical",
             "save_other_choice": 0
-        },
-        {
-            "key": "field_63c6ab86be035",
-            "label": "Côté de l'image en desktop",
-            "name": "cote_image",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "droite": "droite",
-                "gauche": "gauche"
-            },
-            "default_value": "droite",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "vertical",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_63c6ab86c1cba",
-            "label": "Titre",
-            "name": "titre",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_63c6ab86c57eb",
-            "label": "Texte principal",
-            "name": "texte",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_63c6ab86c9300",
-            "label": "Bouton",
-            "name": "lien",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
         },
         {
             "key": "field_63c6ab86cce24",
@@ -132,6 +71,26 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_63c6ab86c57eb",
+            "label": "Texte",
+            "name": "texte",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -139,7 +98,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/colonnes-uni"
+                "value": "acf\/colonnes-opaque"
             }
         ]
     ],
@@ -152,5 +111,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673964445
+    "modified": 1698603381
 }

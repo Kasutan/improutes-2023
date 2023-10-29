@@ -215,12 +215,12 @@ class BE_ACF_Customizations {
 
 		/*********Bloc colonnes-uni ***************/
 		$this->helper_register_block_type( 
-			'colonnes-uni',
-			'Bloc 2 colonnes sur fond coloré uni',
-			'Section avec titre, texte, bouton dans une colonne sur fond coloré uni, et photo dans une deuxième colonne.',
+			'colonnes-opaque',
+			'Bloc 2 colonnes sur fond coloré opaque',
+			'Section pleine largeur sur fond coloré opaque avec texte dans une colonne et image dans une deuxième colonne (pour le bloc itinéraires).',
 			'art', 
 			false,
-			array( 'colonne', 'uni', 'accueil')
+			array( 'colonne', 'opaque', 'itineraire','itinéraires')
 		);
 
 
