@@ -225,3 +225,13 @@ function kasutan_make_list($text) {
 function kasutan_formate_tel($tel) {
 	return str_replace(array(' ','(0)'),'',$tel);
 }
+
+/*****
+ * Ajouter des espaces inseccables aux guillemets
+ */
+add_filter('the_content','kasutan_force_exposants');
+function kasutan_force_exposants($string) {
+	$string=str_replace('« ','«&nbsp;',$string);
+	$string=str_replace(' »','&nbsp;»',$string);
+	return $string;
+}
