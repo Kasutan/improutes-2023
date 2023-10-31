@@ -1,0 +1,94 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.carrousel-banniere {
+	@include bleed;
+	margin-bottom: var(--margin-y);
+
+	.owl-carousel {
+		position: relative;
+	}
+
+	.owl-item {
+		height:45rem;
+	}
+
+	.slide {
+		display: flex;
+		flex-direction: column;
+		height:45rem;
+		padding:8rem var(--padding-x);
+		position: relative;
+		text-decoration: none;
+		width: 100vw;
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+
+		&:focus-visible {
+			p {
+				outline: dashed 2px var(--blanc);
+			}
+		}
+	}
+
+	img {
+		height: 100%;
+		left:0;
+		object-fit: cover;
+		position: absolute;
+		top:0;
+		width:100%;
+	}
+
+	p {
+		color:var(--blanc);
+		font-weight: 700;
+		margin-bottom: 0;
+		padding:0.7rem 1.7rem 2rem;
+		position: relative;
+	}
+
+	.texte-1 {
+		font-size: 2.5rem;
+		margin-top: auto;
+		max-width:29.5rem;
+		z-index: 1;
+	}
+
+	.texte-2 {
+		font-size: 1.8rem;
+		left:3.9rem;
+		padding-top: 2.4rem;
+		top:-1.7rem;
+		max-width: 41rem;
+	}
+
+
+	.owl-dots {
+		bottom:2.4rem;
+		display: flex;
+		justify-content: center;
+		left:0;
+		position: absolute;
+		width: 100%;
+		button {
+			background-color: var(--gris-input);
+			border-radius:100%;
+			height:1.8rem;
+			margin-bottom: 0;
+			margin-right: 0.7rem;
+			min-height: unset;
+			min-width: unset;
+			opacity: 0.8;
+			width:1.8rem;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			&.active, &:hover, &:focus {
+				background-color: var(--orange);
+				opacity: 1;
+			}
+		}
+	}
+}

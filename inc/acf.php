@@ -273,6 +273,16 @@ class BE_ACF_Customizations {
 			array( 'colonne', 'opaque', 'livre','librairie')
 		);
 
+		/*********Bloc carrousel-banniere ***************/
+		$this->helper_register_block_type( 
+			'carrousel-banniere',
+			'Bloc bannière accueil avec carrousel',
+			'Section pleine largeur avec carrousel (image banniere cliquable + 2 textes sur fond coloré pour chaque slide)',
+			'art', 
+			true, //besoin de JS pour le carrousel
+			array('accueil', 'banniere','carrousel')
+		);
+
 		/*********Bloc blog ***************/
 		$this->helper_register_block_type( 
 			'blog',

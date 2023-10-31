@@ -1,0 +1,209 @@
+{
+    "key": "group_65413d0f3c34b",
+    "title": "Bloc bannière accueil avec carrousel",
+    "fields": [
+        {
+            "key": "field_65413d0f604c3",
+            "label": "Bloc bannière accueil avec carrousel",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "Section pleine largeur avec carrousel (image banniere cliquable + 2 textes sur fond coloré pour chaque slide)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_65413d40604c4",
+            "label": "Slides",
+            "name": "slides",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_65413dba662eb",
+            "button_label": "Ajouter une slide",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65413d50604c5",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "jpg",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_65413d40604c4"
+                },
+                {
+                    "key": "field_65413d98662ea",
+                    "label": "Cible (optionnelle)",
+                    "name": "cible",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_65413d40604c4"
+                },
+                {
+                    "key": "field_65413dba662eb",
+                    "label": "Texte 1",
+                    "name": "texte_1",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_65413d40604c4"
+                },
+                {
+                    "key": "field_65413ddeb9883",
+                    "label": "Couleur de fond du texte 1",
+                    "name": "couleur_1",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "rouge": "rouge",
+                        "orange": "orange",
+                        "vert": "vert",
+                        "bleu": "bleu"
+                    },
+                    "default_value": "rouge",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "vertical",
+                    "save_other_choice": 0,
+                    "parent_repeater": "field_65413d40604c4"
+                },
+                {
+                    "key": "field_65413dd8b9882",
+                    "label": "Texte 2",
+                    "name": "texte_2",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_65413d40604c4"
+                },
+                {
+                    "key": "field_65413e31dc1fa",
+                    "label": "Couleur de fond du texte 2",
+                    "name": "couleur_2",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "rouge": "rouge",
+                        "orange": "orange",
+                        "vert": "vert",
+                        "bleu": "bleu"
+                    },
+                    "default_value": "orange",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "vertical",
+                    "save_other_choice": 0,
+                    "parent_repeater": "field_65413d40604c4"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/carrousel-banniere"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1698775189
+}
