@@ -9,6 +9,10 @@
 	.col-texte {
 		margin-bottom: 3rem;
 	}
+	ul:not([class]) li::marker {
+		color:var(--rouge); 
+	}
+
 	.col-image {
 		padding:var(--p);
 	}
@@ -85,3 +89,4 @@
 		
 	}
 }
+

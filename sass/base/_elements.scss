@@ -29,16 +29,8 @@ hr {
 
 		li {
 			margin-bottom: 0;
-			/*&::before {
-				background-color: var(--vert);
-				content: ' ';
-				display: inline-block;
-				height: 5px;
-				margin-right: 4px;
-				width: 5px;
-			}*/
 			&::marker {
-				color: var(--rouge);
+				color: var(--noir);
 			}
 		}
 	}

@@ -494,6 +494,31 @@ textarea {
 .wp-block-columns a.wp-block-button__link {
   min-width: 10rem;
 }
+.wp-block-columns.villes-membres {
+  margin-bottom: var(--margin-y);
+  padding: 3.5rem;
+}
+@media screen and (max-width: 767px) {
+  .wp-block-columns.villes-membres {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 3.3rem calc(3 * var(--padding-x)) 6rem;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 1920px) {
+  .wp-block-columns.villes-membres {
+    width: var(--largeur-max);
+  }
+}
+@media (min-width: 1440px) {
+  .wp-block-columns.villes-membres .wp-block-column {
+    padding-left: 5rem;
+  }
+}
+.wp-block-columns.villes-membres ul {
+  padding-left: 2rem;
+}
 
 .wp-block-column.gap-fallback {
   padding-left: 2em;

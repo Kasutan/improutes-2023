@@ -7,6 +7,9 @@
 .colonnes-decor .col-texte {
   margin-bottom: 3rem;
 }
+.colonnes-decor ul:not([class]) li::marker {
+  color: var(--rouge);
+}
 .colonnes-decor .col-image {
   padding: var(--p);
 }

@@ -44,6 +44,27 @@
 		min-width:10rem;
 	}
 
+	&.villes-membres {
+		margin-bottom: var(--margin-y);
+		@media screen and (max-width:767px) {
+			@include bleed;
+			padding:3.3rem calc(3 * var(--padding-x)) 6rem;
+		}
+
+		padding:3.5rem;
+
+		@include bp(xl) {
+			.wp-block-column {
+				padding-left: 5rem;
+			}
+		}
+
+		ul {
+			padding-left:2rem;
+			
+		}
+	}
+
 	
 }
 .wp-block-column {
