@@ -47,7 +47,7 @@
   position: relative;
   width: 50%;
 }
-@media (min-width: 500px) {
+@media (min-width: 550px) {
   .banniere .texte {
     font-size: calc(20 * var(--taille-texte) / 15);
     padding-left: 5vw;
@@ -58,7 +58,7 @@
     font-size: calc(25 * var(--taille-texte) / 15);
   }
 }
-@media (min-width: 960px) {
+@media (min-width: 1024px) {
   .banniere .texte {
     font-size: calc(30 * var(--taille-texte) / 15);
     padding-left: 18vw;
