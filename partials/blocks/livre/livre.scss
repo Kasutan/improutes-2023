@@ -1,0 +1,115 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.livre {
+	@include bleed;	
+	margin-bottom: 5.2rem;
+
+	.col-image {
+		position: relative;
+	}
+	.image {
+		width:100%;
+
+		img {
+			object-fit: cover;
+			width:100%;
+		}
+	}
+
+	.annee {
+		color:var(--blanc);
+		display: inline-block;
+		font-size: 2.4rem;
+		font-weight: 700;
+		padding: 4px 27px 8px 22px;
+		position: absolute;
+		right:0;
+		top:4rem;
+	}
+
+	.col-texte {
+		color:var(--blanc);
+		padding:2.2rem var(--padding-x) 4.2rem;
+	}
+
+	h2 {
+		margin-bottom: 1em;
+	}
+
+	.texte {
+		font-weight: 600;
+	}
+
+	ul:not([class]) li::marker {
+		color:var(--blanc);
+	}
+
+	.fichier {
+		display: flex;
+		flex-direction: column;
+		font-weight: medium;
+		padding-left: 50px;
+		position: relative;
+		&::before {
+			background-image: url("PDF.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: '';
+			display: block;
+			height:50px;
+			left:0;
+			position: absolute;
+			top:0;
+			width:40px;
+		}
+	}
+
+
+	@include bp(md) {
+		--p:2rem;
+
+		align-items: stretch;
+		display: grid;
+		grid-template-columns: 41% 59%;
+		grid-auto-flow: dense;
+		margin-bottom: 2.2rem;
+		
+		.col-texte {
+			padding:var(--p);
+			padding-right:var(--padding-x);
+		}
+		
+		.image {
+			height:100%;
+			img {
+				height:100%;
+			}
+		}
+
+		&.inverser {
+			grid-template-columns: 59% 41%;
+			.col-texte {
+				grid-column: 1;
+				padding-right:var(--p);
+				padding-left:var(--padding-x);
+			}
+			.col-image {
+				grid-column: 2;
+			}
+			.annee {
+				right: unset;
+				left:0;
+			}
+		}
+		
+	}
+
+	@include bp(lg) {
+		--p:5rem;
+		.annee {
+			top:5rem;
+		}
+	}
+
+	
+}

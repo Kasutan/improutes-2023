@@ -213,7 +213,7 @@ class BE_ACF_Customizations {
 		);
 
 
-		/*********Bloc colonnes-uni ***************/
+		/*********Bloc colonnes-opaque ***************/
 		$this->helper_register_block_type( 
 			'colonnes-opaque',
 			'Bloc 2 colonnes sur fond coloré opaque',
@@ -261,6 +261,16 @@ class BE_ACF_Customizations {
 			'art', 
 			false,
 			array( 'colonne', 'opaque', 'expo','exposition')
+		);
+
+		/*********Bloc livre ***************/
+		$this->helper_register_block_type( 
+			'livre',
+			'Bloc livre',
+			'Section pleine largeur sur fond coloré opaque avec année et image dans une colonne, et titre, texte de présentation et fichier à télécharger dans une autre colonne (pour page Librairie).',
+			'art', 
+			false,
+			array( 'colonne', 'opaque', 'livre','librairie')
 		);
 
 		/*********Bloc blog ***************/
