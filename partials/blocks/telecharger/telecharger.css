@@ -1,0 +1,25 @@
+.telecharger {
+  background-color: var(--orange);
+  padding: 3rem 2rem 1px;
+  padding-left: 8.5rem;
+}
+.telecharger li {
+  color: var(--blanc);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 3.2rem;
+  max-width: 35rem;
+  position: relative;
+}
+.telecharger li::before {
+  background-image: url("PDF.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 50px;
+  left: -70px;
+  position: absolute;
+  top: 0;
+  width: 56px;
+}

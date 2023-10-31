@@ -223,6 +223,16 @@ class BE_ACF_Customizations {
 			array( 'colonne', 'opaque', 'itineraire','itinéraires')
 		);
 
+		/*********Bloc telecharger ***************/
+		$this->helper_register_block_type( 
+			'telecharger',
+			'Bloc documents à télécharger',
+			'Bloc sur fond orange avec documents PDF à télécharger.',
+			'art', 
+			false,
+			array('telecharger', 'pdf', 'télécharger')
+		);
+
 
 		/*********Bloc blog ***************/
 		$this->helper_register_block_type( 
