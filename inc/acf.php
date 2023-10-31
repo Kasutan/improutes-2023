@@ -283,6 +283,16 @@ class BE_ACF_Customizations {
 			array('accueil', 'banniere','carrousel')
 		);
 
+		/*********Bloc intro ***************/
+		$this->helper_register_block_type( 
+			'intro',
+			'Bloc intro pour la page d\'accueil',
+			'Section avec titre, texte et décor "coup de pinceau en courbe".',
+			'art', 
+			false, 
+			array('intro', 'decor', 'accueil')
+		);
+
 		/*********Bloc blog ***************/
 		$this->helper_register_block_type( 
 			'blog',

@@ -127,3 +127,27 @@ $colors: (
 		width: 12.1rem;
 	}
 }
+
+@mixin titre-accueil {
+	font-size: 4rem;
+	font-weight: 100;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	b, strong {
+		font-weight: 700;
+	}
+	&::after {
+		background-image: url('/wp-content/themes/improutes-2023/icons/sous-titre-home.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		content: '';
+		display: block;
+		height: 4px;
+		margin: 16px 0 40px;
+		position: relative;
+		width: 100%;
+	}
+
+}

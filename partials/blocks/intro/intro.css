@@ -1,0 +1,58 @@
+.intro {
+  margin-bottom: var(--margin-y);
+}
+.intro h2 {
+  font-size: 4rem;
+  font-weight: 100;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+.intro h2 b, .intro h2 strong {
+  font-weight: 700;
+}
+.intro h2::after {
+  background-image: url("/wp-content/themes/improutes-2023/icons/sous-titre-home.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 16px 0 40px;
+  position: relative;
+  width: 100%;
+}
+.intro .texte-wrap {
+  margin-top: 60px;
+  position: relative;
+}
+.intro .texte {
+  font-weight: 600;
+  position: relative;
+  text-align: center;
+}
+.intro .decor {
+  background-image: url("brush-circle.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: block;
+  height: 146px;
+  left: -30px;
+  position: absolute;
+  top: -60px;
+  transform-origin: center;
+  transform: rotateZ(6.5deg);
+  width: 172px;
+}
+@media (min-width: 768px) {
+  .intro .texte-wrap {
+    margin: 0 auto;
+    max-width: 61.9rem;
+  }
+  .intro .decor {
+    left: -60px;
+    top: -50px;
+  }
+}

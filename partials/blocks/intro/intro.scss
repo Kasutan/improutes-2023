@@ -1,0 +1,42 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.intro {
+	margin-bottom: var(--margin-y);
+	h2 {
+		@include titre-accueil
+	}
+	.texte-wrap {
+		margin-top: 60px;
+		position: relative;
+	}
+	.texte {
+		font-weight: 600;
+		position: relative;
+		text-align: center;
+	}
+	.decor {
+		background-image: url('brush-circle.png'); 
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		display: block;
+		height: 146px;
+		left:-30px;
+		position: absolute;
+		top:-60px;
+		transform-origin: center;
+		transform:rotateZ(6.5deg);
+		width: 172px;
+	}
+
+	@include bp(md) {
+		.texte-wrap {
+			margin:0 auto;
+			max-width: 61.9rem;
+		}
+		.decor {
+			left:-60px;
+			top:-50px;
+		}
+	}
+} 
