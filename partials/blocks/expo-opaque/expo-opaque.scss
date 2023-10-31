@@ -1,0 +1,62 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.expo-opaque {
+	@include bleed;	
+	margin-bottom: var(--margin-y);
+	padding:var(--padding-y-1) var(--padding-x);
+	position: relative;
+	.fond {
+		height: 100%;
+		left:0;
+		position: absolute;
+		top:0;
+		width:100%;
+	}
+	h2, .images, .texte {
+		position: relative;
+	}
+	h2 {
+		margin-bottom: 2em;
+	}
+	img {
+		margin: 0 auto 3rem;
+		&:last-of-type {
+			margin-bottom: 2em;
+		}
+	}
+
+	.texte {
+		font-weight: 500;
+		line-height: 1.4;
+	}
+
+	ul:not([class]) {
+		list-style-position: outside;
+	}
+
+
+	@include bp(md) {
+		column-gap:3rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		.fond {
+			width: 70%;
+		}
+		.texte {
+			grid-column: 1;
+			grid-row: 2;
+		}
+		.images {
+			grid-column: 2;
+			grid-row:2;
+		}
+		
+	}
+
+	@include bp(lg) {
+		column-gap:8rem;
+		padding:6rem var(--padding-x);
+		grid-template-columns: 1fr 34rem;
+	}
+
+}

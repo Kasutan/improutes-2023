@@ -217,7 +217,7 @@ class BE_ACF_Customizations {
 		$this->helper_register_block_type( 
 			'colonnes-opaque',
 			'Bloc 2 colonnes sur fond coloré opaque',
-			'Section pleine largeur sur fond coloré opaque avec texte dans une colonne et image dans une deuxième colonne (pour le bloc itinéraires).',
+			'Section pleine largeur sur fond coloré opaque avec texte dans une colonne et image dans une deuxième colonne (pour le bloc itinéraires de la page Impressionisms Routes).',
 			'art', 
 			false,
 			array( 'colonne', 'opaque', 'itineraire','itinéraires')
@@ -251,6 +251,16 @@ class BE_ACF_Customizations {
 			'art', 
 			false,
 			array( 'colonne', 'logo','partenaire')
+		);
+
+		/*********Bloc expo-opaque ***************/
+		$this->helper_register_block_type( 
+			'expo-opaque',
+			'Bloc exposition sur fond coloré opaque',
+			'Section pleine largeur avec titre et texte dans une colonne sur fond coloré opaque et 3 images qui chevauchent la zone colorée (pour le bloc itinéraire de la page Exposition).',
+			'art', 
+			false,
+			array( 'colonne', 'opaque', 'expo','exposition')
 		);
 
 		/*********Bloc blog ***************/
