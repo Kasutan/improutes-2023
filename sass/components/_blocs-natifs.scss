@@ -45,6 +45,7 @@
 	}
 
 	&.villes-membres {
+		font-size: 500;
 		margin-bottom: var(--margin-y);
 		@media screen and (max-width:767px) {
 			@include bleed;

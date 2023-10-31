@@ -2541,6 +2541,7 @@ form.search-form.search-topbar input.search-submit {
   min-width: 10rem;
 }
 .wp-block-columns.villes-membres {
+  font-size: 500;
   margin-bottom: var(--margin-y);
   padding: 3.5rem;
 }
