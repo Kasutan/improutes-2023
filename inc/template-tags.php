@@ -386,3 +386,14 @@ function kasutan_affiche_filtre_articles() {
 	</form>
 <?php
 }
+
+
+
+//Utilisée dans le bloc livre et dans le bloc télécharger
+
+function kasutan_affiche_bloc_telecharger($titre,$file,$desc) {
+	if($titre) printf('<span><strong>%s</strong></span>',$titre);
+	if($file) printf('<span>%s</span>',$file['filename']);
+	if($desc) printf('<span>%s</span>',$desc);
+	if($file) printf('<a href="%s" class="bouton pdf" target="_blank" rel="noopener noreferrer">Télécharger</a>',$file['url']);
+}

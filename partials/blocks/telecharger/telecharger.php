@@ -15,7 +15,7 @@ if(array_key_exists('className',$block)) {
 
 
 
-if(have_rows('docs')) :
+if(have_rows('docs') && function_exists('kasutan_affiche_bloc_telecharger')) :
 
 	printf('<ul class="acf telecharger %s">', $className);
 
@@ -28,10 +28,7 @@ if(have_rows('docs')) :
 
 				echo '<li>';
 				
-				if($titre) printf('<span><strong>%s</strong></span>',$titre);
-				if($file) printf('<span>%s</span>',$file['filename']);
-				if($desc) printf('<span>%s</span>',$desc);
-				if($file) printf('<a href="%s" class="bouton pdf" target="_blank" rel="noopener noreferrer">Télécharger</a>',$file['url']);
+				kasutan_affiche_bloc_telecharger($titre,$file,$desc);
 
 
 				echo '</li>';
