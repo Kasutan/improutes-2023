@@ -2538,6 +2538,9 @@ form.search-form.search-topbar input.search-submit {
   }
 }
 
+.wp-block-columns {
+  gap: 2rem;
+}
 .wp-block-columns.alignfull {
   margin-bottom: 0;
   padding: var(--margin-y-2) var(--padding-x);

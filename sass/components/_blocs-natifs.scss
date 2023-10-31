@@ -34,6 +34,7 @@
 }
 
 .wp-block-columns {
+	gap:2rem;
 	&.alignfull {
 		margin-bottom: 0;
 		padding:var(--margin-y-2) var(--padding-x);

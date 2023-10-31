@@ -484,6 +484,9 @@ textarea {
   }
 }
 
+.wp-block-columns {
+  gap: 2rem;
+}
 .wp-block-columns.alignfull {
   margin-bottom: 0;
   padding: var(--margin-y-2) var(--padding-x);
