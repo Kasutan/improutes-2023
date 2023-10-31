@@ -1,0 +1,38 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.partenaires {
+	font-weight: 500;
+	margin-bottom: var(--margin-y);
+	--gap:2rem;
+
+	.image {
+		img {
+			margin:3rem auto;
+		}
+	}
+
+	@include bp(md) {
+		column-gap:var(--gap);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		.image {
+			grid-column: 2;
+			grid-row: 1 / span 2;
+			img {
+				margin:0 auto;
+			}
+		}
+		.texte {
+			grid-column: 1;
+			grid-row:2;
+		}
+	}
+
+	@include bp(lg) {
+		--gap:4rem;
+	}
+	@include bp(xl) {
+		--gap:6rem;
+	}
+}
+

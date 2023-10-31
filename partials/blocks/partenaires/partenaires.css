@@ -1,0 +1,36 @@
+.partenaires {
+  font-weight: 500;
+  margin-bottom: var(--margin-y);
+  --gap:2rem;
+}
+.partenaires .image img {
+  margin: 3rem auto;
+}
+@media (min-width: 768px) {
+  .partenaires {
+    column-gap: var(--gap);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .partenaires .image {
+    grid-column: 2;
+    grid-row: 1/span 2;
+  }
+  .partenaires .image img {
+    margin: 0 auto;
+  }
+  .partenaires .texte {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .partenaires {
+    --gap:4rem;
+  }
+}
+@media (min-width: 1440px) {
+  .partenaires {
+    --gap:6rem;
+  }
+}
