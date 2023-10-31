@@ -1,0 +1,18 @@
+.comite {
+  --p:1rem;
+  margin: 5rem auto var(--margin-y);
+  max-width: 600px;
+}
+.comite td {
+  padding-bottom: 2em;
+}
+.comite td.nom {
+  max-width: 200px;
+}
+.comite td.refs {
+  max-width: 380px;
+  padding-left: var(--p);
+}
+.comite td.refs p {
+  margin-bottom: 0;
+}

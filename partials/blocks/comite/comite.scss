@@ -1,0 +1,21 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.comite {
+	--p:1rem;
+	margin:5rem auto var(--margin-y);
+	max-width: 600px;
+	td {
+		padding-bottom : 2em;
+		&.nom {
+			max-width: 200px;
+		}
+		&.refs {
+			max-width: 380px;
+			padding-left: var(--p);
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+}

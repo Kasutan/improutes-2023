@@ -233,6 +233,16 @@ class BE_ACF_Customizations {
 			array('telecharger', 'pdf', 'télécharger')
 		);
 
+			/*********Bloc comité scientifique ***************/
+			$this->helper_register_block_type( 
+				'comite',
+				'Bloc comité scientifique',
+				'Bloc avec liste des membres du comité et leurs références sur 2 colonnes.',
+				'art', 
+				false,
+				array('comite', 'comité', 'scientifique','membre')
+			);
+
 
 		/*********Bloc blog ***************/
 		$this->helper_register_block_type( 
