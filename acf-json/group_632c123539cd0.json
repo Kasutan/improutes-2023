@@ -1,14 +1,32 @@
 {
     "key": "group_632c123539cd0",
-    "title": "Bloc logos de marques",
+    "title": "Bloc carrousel de livres",
     "fields": [
+        {
+            "key": "field_654201c94b2ad",
+            "label": "Bloc carrousel de livres",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "Section avec titre et carrousel de livres pour la page d'accueil",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
         {
             "key": "field_632c12351b229",
             "label": "Titre du carrousel",
             "name": "titre",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "Placer les mots à afficher en gras entre balises b",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -18,37 +36,80 @@
             },
             "default_value": "",
             "maxlength": "",
-            "placeholder": "",
+            "placeholder": "texte en police fine <b>texte en gras<\/b>",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_63c96a74e1cd9",
-            "label": "Logos des marques",
-            "name": "galerie",
+            "key": "field_654201eb84e79",
+            "label": "Livres",
+            "name": "livres",
             "aria-label": "",
-            "type": "gallery",
+            "type": "repeater",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
-            "library": "all",
-            "min": "",
-            "max": "",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "insert": "append",
-            "preview_size": "medium"
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_6542023484e7b",
+            "button_label": "Ajouter un livre",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6542020484e7a",
+                    "label": "Photo du livre",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "jpg,jpeg",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_654201eb84e79"
+                },
+                {
+                    "key": "field_6542023484e7b",
+                    "label": "Titre du livre",
+                    "name": "texte",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_654201eb84e79"
+                }
+            ]
         }
     ],
     "location": [
@@ -56,7 +117,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/carrousel"
+                "value": "acf\/carrousel-livres"
             }
         ]
     ],
@@ -69,5 +130,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674144409
+    "modified": 1698825037
 }

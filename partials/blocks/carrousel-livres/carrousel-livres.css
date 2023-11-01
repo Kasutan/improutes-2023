@@ -1,0 +1,100 @@
+.carrousel-livres {
+  --p:40px;
+  --l:45px;
+  --l2: calc(-1 * var(--l));
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--gris-fond);
+  padding: 4.4rem var(--p) 6.6rem;
+}
+@media (min-width: 1920px) {
+  .carrousel-livres {
+    width: var(--largeur-max);
+  }
+}
+.carrousel-livres h2 {
+  font-size: 4rem;
+  font-weight: 100;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+.carrousel-livres h2 b, .carrousel-livres h2 strong {
+  font-weight: 700;
+}
+.carrousel-livres h2::after {
+  background-image: url("/wp-content/themes/improutes-2023/icons/sous-titre-home.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 16px 0 40px;
+  position: relative;
+  width: 100%;
+}
+.carrousel-livres img {
+  height: 370px;
+  margin-bottom: 19px;
+  object-fit: cover;
+  object-position: center;
+  width: 258px;
+}
+.carrousel-livres .texte {
+  color: var(--marron);
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+.carrousel-livres .owl-carousel {
+  position: relative;
+}
+.carrousel-livres .owl-nav {
+  display: flex;
+  height: 55px;
+  justify-content: space-between;
+  left: 0;
+  position: absolute;
+  top: 163px;
+  width: 100%;
+}
+.carrousel-livres .owl-nav button {
+  margin: 0;
+  min-width: unset;
+  width: 55px;
+}
+.carrousel-livres .owl-nav button.owl-prev, .carrousel-livres .owl-nav button.owl-next {
+  background-color: transparent;
+  background-image: url("angle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px;
+  left: var(--l);
+  position: relative;
+}
+.carrousel-livres .owl-nav button.owl-prev {
+  left: var(--l2);
+  transform-origin: center;
+  transform: rotate(180deg);
+}
+.carrousel-livres .owl-nav button:hover, .carrousel-livres .owl-nav button:focus {
+  color: var(--rouge);
+}
+@media (min-width: 768px) {
+  .carrousel-livres {
+    --p:var(--padding-x);
+  }
+}
+@media (min-width: 1024px) {
+  .carrousel-livres {
+    --l:55px;
+    padding-bottom: 8rem;
+  }
+}
+@media (min-width: 1440px) {
+  .carrousel-livres {
+    --l:80px;
+  }
+}

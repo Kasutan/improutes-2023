@@ -304,14 +304,14 @@ class BE_ACF_Customizations {
 		);
 
 
-		/*********Bloc carrousel de logos ***************/
+		/*********Bloc carrousel-livres ***************/
 		$this->helper_register_block_type( 
-			'carrousel',
-			'Bloc carrousel de logos des marques',
-			'Section avec titre et carrousel de logos des marques',
+			'carrousel-livres',
+			'Bloc carrousel de livres',
+			'Section avec titre et carrousel de livres pour la page d\'accueil',
 			'art', 
 			true, //besoin de JS pour le carrousel
-			array('logo', 'marque','carrousel')
+			array('accueil', 'livre','carrousel','librairie')
 		);
 		
 	}
