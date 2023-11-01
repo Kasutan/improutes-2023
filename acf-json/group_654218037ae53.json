@@ -1,14 +1,14 @@
 {
-    "key": "group_6540d921f32b9",
-    "title": "Bloc partenaire (page partenaires)",
+    "key": "group_654218037ae53",
+    "title": "Bloc bannière partenaires (page accueil)",
     "fields": [
         {
-            "key": "field_6540d9220a335",
-            "label": "Bloc partenaires",
+            "key": "field_65421803830e5",
+            "label": "Bloc bannière partenaires (page accueil)",
             "name": "",
             "aria-label": "",
             "type": "accordion",
-            "instructions": "Section avec un titre, un logo et une colonne de texte. Le logo est placé à droite en desktop, mais sous le titre en mobile. Pour la page partenaires.",
+            "instructions": "Section pleine largeur avec image de fond et les logos côte à côté des deux partenaires (pour page d'accueil).",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -21,12 +21,12 @@
             "endpoint": 0
         },
         {
-            "key": "field_6540d96efcf6b",
+            "key": "field_6542180386b77",
             "label": "Titre",
             "name": "titre",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "",
+            "instructions": "Placer les mots à afficher en gras entre balises b",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -37,32 +37,12 @@
             "default_value": "",
             "maxlength": "",
             "rows": 2,
-            "placeholder": "",
+            "placeholder": "texte en police fine <b>texte en gras<\/b>",
             "new_lines": "br"
         },
         {
-            "key": "field_6540d9220dcfd",
-            "label": "Colonne de texte",
-            "name": "texte",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_6540d922117f3",
-            "label": "Logo",
+            "key": "field_654218038e06f",
+            "label": "Image de fond",
             "name": "image",
             "aria-label": "",
             "type": "image",
@@ -82,8 +62,58 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": "png, jpg, jpeg",
+            "mime_types": "jpg, jpeg",
             "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_65421947ff3d8",
+            "label": "Logo 1",
+            "name": "logo_1",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,jpg,jpeg",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_654219620d13e",
+            "label": "Logo 2",
+            "name": "logo_2",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png,jpg,jpeg",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -91,7 +121,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/partenaires"
+                "value": "acf\/banniere-partenaires"
             }
         ]
     ],
@@ -104,5 +134,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698830331
+    "modified": 1698830692
 }

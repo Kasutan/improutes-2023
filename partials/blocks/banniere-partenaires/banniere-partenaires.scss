@@ -1,0 +1,64 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.banniere-partenaires {
+	--h:32.4rem;//hauteur banniere
+	--m:3.3rem; //margin bottom
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height:var(--h);
+	margin-bottom: var(--m);
+	padding:2rem var(--padding-x);
+	position: relative;
+	@include bleed;
+
+	.image {
+		height:100%;
+		left:0;
+		opacity: 0.2;
+		overflow-y: hidden;
+		position: absolute;
+		top:0;
+		width:100%;
+		img {
+			height:100%;
+			object-fit: cover;
+			object-position: center;
+			width:100%;
+		}
+	}
+	
+	h2 {
+		@include titre-accueil;
+		position:relative;
+	}
+
+	.logos {
+		column-gap: 2rem;
+		display: grid;
+		grid-template-columns: 1.5fr 2fr;
+		position:relative;
+
+	}
+
+	@include bp(sm) {
+		.logos {
+			column-gap: 37px;
+			grid-template-columns: 152px 197px;
+			margin:0 auto;
+		}
+	}
+
+	
+	@include bp(lg) {
+		--h:369px;
+		--m:104px;
+		.logos {
+			column-gap: 99px;
+			grid-template-columns: 210px 272px;
+		}
+	
+	}
+	
+} 

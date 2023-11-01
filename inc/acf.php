@@ -182,14 +182,14 @@ class BE_ACF_Customizations {
 			return;
 
 
-		/*********Bloc banniere ***************/
+		/*********Bloc banniere-partenaires ***************/
 		$this->helper_register_block_type( 
-			'banniere',
-			'Bloc image bannière',
-			'Section avec une image de fond et un texte sur fond coloré semi-opaque la page d\'accueil.',
+			'banniere-partenaires',
+			'Bloc bannière partenaires (page accueil)',
+			'Section pleine largeur avec image de fond et les logos côte à côté des deux partenaires (pour page d\'accueil).',
 			'art', 
 			false,
-			array( 'banniere', 'accueil')
+			array( 'banniere', 'accueil','partenaires')
 		);
 
 		/*********Bloc colonnes-decor ***************/

@@ -1,0 +1,80 @@
+.banniere-partenaires {
+  --h:32.4rem;
+  --m:3.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: var(--h);
+  margin-bottom: var(--m);
+  padding: 2rem var(--padding-x);
+  position: relative;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+@media (min-width: 1920px) {
+  .banniere-partenaires {
+    width: var(--largeur-max);
+  }
+}
+.banniere-partenaires .image {
+  height: 100%;
+  left: 0;
+  opacity: 0.2;
+  overflow-y: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.banniere-partenaires .image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+.banniere-partenaires h2 {
+  font-size: 4rem;
+  font-weight: 100;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+.banniere-partenaires h2 b, .banniere-partenaires h2 strong {
+  font-weight: 700;
+}
+.banniere-partenaires h2::after {
+  background-image: url("/wp-content/themes/improutes-2023/icons/sous-titre-home.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 16px 0 40px;
+  position: relative;
+  width: 100%;
+}
+.banniere-partenaires .logos {
+  column-gap: 2rem;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  position: relative;
+}
+@media (min-width: 550px) {
+  .banniere-partenaires .logos {
+    column-gap: 37px;
+    grid-template-columns: 152px 197px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  .banniere-partenaires {
+    --h:369px;
+    --m:104px;
+  }
+  .banniere-partenaires .logos {
+    column-gap: 99px;
+    grid-template-columns: 210px 272px;
+  }
+}
