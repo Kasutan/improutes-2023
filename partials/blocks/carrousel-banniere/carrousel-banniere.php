@@ -34,7 +34,7 @@ if(function_exists('get_field')) :
 					echo '<div class="slide">';
 				}
 					
-					echo wp_get_attachment_image( $image_id, 'banniere');
+					echo wp_get_attachment_image( $image_id, 'banniere',false,array('decoding'=>'async','loading'=>'eager'));
 
 					if($texte_1 && $couleur_1) {
 						printf('<p class="texte-1 has-%s-background-color">%s</p>',$couleur_1,$texte_1);
