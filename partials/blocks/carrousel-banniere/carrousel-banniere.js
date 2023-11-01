@@ -19,16 +19,16 @@
 				margin:0,
 				//slideBy:'page',
 				//checkVisible: false,
-				//onInitialized: accessibleNav,
+				onInitialized: accessibleNav,
 				
 			});
 		}
 
 		function accessibleNav(e) {
 			$('.owl-dot span').addClass('screen-reader-text');
-			$('.owl-dot span').html('Afficher le groupe de logos suivant');
+			$('.owl-dot span').html('Planche suivante - next slide');
 			//Role incorrect d'après Axe
-			$('.owl-nav button').removeAttr('role');
+			//$('.owl-nav button').removeAttr('role');
 
 		}
 	}); //fin document ready
