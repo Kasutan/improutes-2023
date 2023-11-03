@@ -4,6 +4,8 @@
  *
 **/
 
+//TODO réutiliser partials/archive.php
+
 $post_type=get_post_type();
 if($post_type==='product') {
 	$label_suite="Voir le produit";
@@ -12,10 +14,12 @@ if($post_type==='product') {
 }
 printf('<li class="post-summary %s">',$post_type);
 
-	ea_post_summary_image('woocommerce_thumbnail');
+	if(function_exists('kasutan_vignette_image')) {
+		kasutan_vignette_image();
+	}
 
 	echo '<div class="post-summary__content">';
-		ea_entry_category('archive');
+		//ea_entry_category('archive');
 		if($post_type==='post') {
 			printf('<p class="entry-date">%s</p>',get_the_date('d/m/Y'));
 		}

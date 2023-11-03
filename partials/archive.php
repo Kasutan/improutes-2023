@@ -14,29 +14,50 @@ if(!empty($args) && array_key_exists('tag',$args)) {
 	$tag=$args['tag'];
 }
 
-printf('<%s class="post-summary">',$tag);
+printf('<%s class="vignette">',$tag);
 
-	ea_post_summary_image('medium_large');
+	$url=esc_url( get_permalink( ) );
 
-	echo '<div class="post-summary__content">';
-		ea_entry_category('archive');
+	printf('<a href="%s">',$$url);
 
+		if(function_exists('kasutan_vignette_image')) {
+			kasutan_vignette_image();
+		}
+
+	
+
+	
 		if(function_exists('kasutan_cat_pour_filtre')) {
 			kasutan_cat_pour_filtre();
 		}
+
+		//TODO améliorer fallbacks ?
+		$infos_cat=array('nom'=>'Autres','couleur'=>'rouge');
+
+		if(function_exists('kasutan_get_cat_et_couleur')) {
+			$infos_cat=kasutan_get_cat_et_couleur();
+		}
+
 		
-		ea_post_summary_title();
 
-		printf('<p class="entry-date">%s</p>', get_the_date('d F Y'));
-
-		$extrait=wpautop(get_the_excerpt());
-		printf('<div class="extrait">%s</div>',$extrait);
-
-		printf('<a href="%s" class="bouton suite" title="Lire cet article"><span class="screen-reader-text">Lire %s</span>
-			<svg xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 10.969 18.81"><path d="M87.666,41.75l7.407-7.407a.593.593,0,0,0,0-.867l-.942-.942a.592.592,0,0,0-.867,0l-8.783,8.783a.593.593,0,0,0,0,.867l8.783,8.783a.592.592,0,0,0,.867,0l.942-.942a.593.593,0,0,0,0-.867Z" transform="translate(95.262 51.155) rotate(180)" fill="#ffffff"/></svg>
-		</a>',esc_url( get_permalink( ) ),get_the_title( ));
+		printf('<div class="vignette-texte has-%s-background-color">',$infos_cat['couleur']);
+			var_dump($infos_cat);	
+			//TODO afficher nom catégorie et ajouter une classe pour la couleur -> champ acf dans la catégorie
+			//Récupérer aussi la couleur pour la traduction
 		
-	echo '</div>';
+			ea_post_summary_title();
+
+			printf('<p class="entry-date">%s</p>', get_the_date('d F Y'));
+
+			$extrait=wpautop(get_the_excerpt());
+			printf('<div class="extrait">%s</div>',$extrait);
+		
+		echo '</div>';
+	
+	echo '</a>';
+
+
+	printf('<a href="%s" class="cat has-%s-background-color">%s</a>',$infos_cat['url'],$infos_cat['couleur'],$infos_cat['nom']);
 
 printf('</%s>',$tag);
 

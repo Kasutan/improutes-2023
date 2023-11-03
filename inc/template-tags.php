@@ -47,27 +47,21 @@ function kasutan_affiche_logos($classe='') {
  * Entry Category
  *
  */
-function ea_entry_category($contexte='archive') {
+function kasutan_get_cat_et_couleur($contexte='archive') {
 	$post_type=get_post_type();
 	$term=false;
+	$reponse=array('nom'=>false,'couleur'=>false,'url'=>false);
+
 	if($post_type==='post') {
 		$term = ea_first_term();
 	}
-	if( !empty( $term ) && ! is_wp_error( $term ) )
-		if($contexte==='archive') {
-			$picto=kasutan_picto_categorie($term->term_id,'blanc');
-			if($picto) {
-				printf('<div class="picto-cat">%s</div>',wp_get_attachment_image( $picto,'thumbnail'));
-			}
-		
-		} else {
-			//contexte single
-			
-				$name=$term->name;
-			
-			echo '<p class="entry-category h1 entry-title">' . $name . '</p>';
-		}
-		
+	if( !empty( $term ) && ! is_wp_error( $term ) ) {
+		$reponse['nom']=$term->name;
+		$reponse['url']=get_term_link($term);
+		$reponse['couleur']=esc_attr(get_field('couleur',$term));
+	}
+	
+	return $reponse;
 }
 
 /**
@@ -120,7 +114,7 @@ function ea_post_summary_title() {
  * Post Summary Image
  *
  */
-function ea_post_summary_image( $size = 'thumbnail' ) {
+function kasutan_vignette_image( $size = 'thumbnail' ) {
 	/*On cherche une image à afficher*/ 
 	$image_id=get_theme_mod( 'custom_logo' ); //défaut : le logo du site
 	$classe='contain';
@@ -128,22 +122,21 @@ function ea_post_summary_image( $size = 'thumbnail' ) {
 		$image_id=get_post_thumbnail_id();
 		$classe='';
 	} else if(function_exists('get_field')) {
-		$banniere=get_field('improutes_page_banniere');
+		$banniere=get_field('improutes_banniere_image');
 		if($banniere) {
 			$image_id=$banniere;
 			$classe='';
 		} else {
-			$logo_footer=get_field('improutes_logo_footer','option');
-			if($logo_footer) {
+			$logo=get_field('improutes_logo_1','option');
+			if($logo) {
 				$image_id=$logo_footer;
-				$classe='contain has-bleu-background-color';
+				$classe='contain';
 			}
 		}
 	}
 
-	printf('<a class="post-summary__image %s" href="%s" tabindex="-1" aria-hidden="true" >%s</a>',
+	printf('<div class="vignette-image %s">%s</div>',
 		$classe,
-		get_permalink(),
 		wp_get_attachment_image( $image_id, $size )
 	);
 }
