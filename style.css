@@ -2363,13 +2363,6 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   }
 }
 
-.blog h1.entry-title {
-  color: var(--rouge);
-}
-.blog h1.entry-title::before {
-  background-image: url("icons/picto-fruit-rouge.png");
-}
-
 form.search-form {
   align-items: stretch;
   display: flex;
