@@ -1,21 +1,25 @@
 .loop {
+	@include bleed;
 	list-style:none;
-	margin:0;
-	padding-top:var(--margin-y-1);
-
-	.post-summary {
-		margin-bottom : var(--margin-y-1);
-	}
+	padding-top:3rem;
 
 	@include bp(lg) {
 		display: grid;
-		grid-template-columns: repeat(3,1fr);
-		gap:var(--margin-y-1);
-		margin-bottom: var(--margin-y-1);
-		.post-summary {
+		grid-template-columns: repeat(4,1fr);
+		padding-top: 4.5rem;
+		margin-bottom: 4.6rem;
+		.vignette {
 			margin-bottom: 0;
-			max-width:unset;
+			max-width:calc(1440px / 4);
 			width:100%;
 		}
+	}
+
+	@include bp(xl) {
+		padding:4.5rem calc((100vw - 1440px) / 2) 0;
+	}
+
+	@include bp(xxl) {
+		padding:4.5rem calc((1920px - 1440px) / 2) 0;
 	}
 }

@@ -18,7 +18,7 @@ printf('<%s class="vignette">',$tag);
 
 	$url=esc_url( get_permalink( ) );
 
-	printf('<a href="%s">',$$url);
+	printf('<a href="%s" class="lien">',$url);
 
 		if(function_exists('kasutan_vignette_image')) {
 			kasutan_vignette_image();
@@ -40,14 +40,13 @@ printf('<%s class="vignette">',$tag);
 
 		
 
-		printf('<div class="vignette-texte has-%s-background-color">',$infos_cat['couleur']);
-			var_dump($infos_cat);	
-			//TODO afficher nom catégorie et ajouter une classe pour la couleur -> champ acf dans la catégorie
-			//Récupérer aussi la couleur pour la traduction
+		printf('<div class="texte has-%s-background-color">',$infos_cat['couleur']);
 		
-			ea_post_summary_title();
+			echo '<div class="titre-wrap">';
+				printf('<h2 class="titre">%s</h2>',get_the_title());
 
-			printf('<p class="entry-date">%s</p>', get_the_date('d F Y'));
+				printf('<p class="date">%s</p>', get_the_date("d.m.Y"));
+			echo '</div>';
 
 			$extrait=wpautop(get_the_excerpt());
 			printf('<div class="extrait">%s</div>',$extrait);
@@ -57,7 +56,7 @@ printf('<%s class="vignette">',$tag);
 	echo '</a>';
 
 
-	printf('<a href="%s" class="cat has-%s-background-color">%s</a>',$infos_cat['url'],$infos_cat['couleur'],$infos_cat['nom']);
+	printf('<a href="%s" class="cat"><div class="fond has-%s-background-color"></div><span>%s</span></a>',$infos_cat['url'],$infos_cat['couleur'],$infos_cat['nom']);
 
 printf('</%s>',$tag);
 

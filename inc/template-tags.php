@@ -114,7 +114,7 @@ function ea_post_summary_title() {
  * Post Summary Image
  *
  */
-function kasutan_vignette_image( $size = 'thumbnail' ) {
+function kasutan_vignette_image( $size = 'medium' ) {
 	/*On cherche une image à afficher*/ 
 	$image_id=get_theme_mod( 'custom_logo' ); //défaut : le logo du site
 	$classe='contain';
@@ -390,3 +390,18 @@ function kasutan_affiche_bloc_telecharger($titre,$file,$desc) {
 	if($desc) printf('<span>%s</span>',$desc);
 	if($file) printf('<a href="%s" class="bouton pdf" target="_blank" rel="noopener noreferrer">Télécharger</a>',$file['url']);
 }
+
+/**
+ * Change the excerpt more string
+ */
+function kasutan_excerpt_more( $more ) {
+	return '&hellip; >>>';
+}
+add_filter( 'excerpt_more', 'kasutan_excerpt_more' );
+
+function kasutan__excerpt_length( $length ) {
+
+	return 22;
+	
+}
+add_filter( 'excerpt_length', 'kasutan__excerpt_length', 999 );
