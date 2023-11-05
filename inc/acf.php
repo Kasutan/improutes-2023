@@ -227,7 +227,7 @@ class BE_ACF_Customizations {
 		$this->helper_register_block_type( 
 			'telecharger',
 			'Bloc documents à télécharger',
-			'Bloc sur fond orange avec documents PDF à télécharger.',
+			'Bloc sur fond orange ou transparent avec documents PDF à télécharger.',
 			'art', 
 			false,
 			array('telecharger', 'pdf', 'télécharger')

@@ -8,7 +8,7 @@
             "name": "",
             "aria-label": "",
             "type": "accordion",
-            "instructions": "Bloc sur fond orange avec documents PDF à télécharger.",
+            "instructions": "Bloc sur fond orange ou transparent avec documents PDF à télécharger.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -19,6 +19,31 @@
             "open": 0,
             "multi_expand": 0,
             "endpoint": 0
+        },
+        {
+            "key": "field_6547d82f6dbd4",
+            "label": "Fond",
+            "name": "fond",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "orange": "orange",
+                "transparent": "transparent"
+            },
+            "default_value": "orange",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
         },
         {
             "key": "field_653f7cbd55463",
@@ -126,5 +151,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698742282
+    "modified": 1699207320
 }

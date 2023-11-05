@@ -23,3 +23,10 @@
   top: 0;
   width: 56px;
 }
+.telecharger.transparent {
+  background-color: transparent;
+  padding-left: 6rem;
+}
+.telecharger.transparent li {
+  max-width: unset;
+}

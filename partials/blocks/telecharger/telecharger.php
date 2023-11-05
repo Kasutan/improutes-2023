@@ -13,7 +13,7 @@ if(array_key_exists('className',$block)) {
 	$className=esc_attr($block["className"]);
 } else $className='';
 
-
+$className.=' '.esc_attr(get_field('fond'));
 
 if(have_rows('docs') && function_exists('kasutan_affiche_bloc_telecharger')) :
 

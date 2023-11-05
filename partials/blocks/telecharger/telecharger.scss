@@ -26,4 +26,13 @@
 		}
 	}
 
+	//variante
+	&.transparent {
+		background-color: transparent;
+		padding-left: 6rem;
+		li {
+			max-width:unset;
+		}
+	}
+
 }
