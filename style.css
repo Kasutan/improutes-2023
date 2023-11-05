@@ -2781,10 +2781,18 @@ form.search-form.search-topbar input.search-submit {
 .vignette .cat span {
   position: relative;
 }
-.vignette img {
+.vignette .vignette-image {
   height: 36rem;
+}
+.vignette .vignette-image img {
+  height: 100%;
   object-fit: cover;
   width: 100%;
+}
+.vignette .vignette-image.contain img {
+  margin: auto;
+  object-fit: contain;
+  width: 90%;
 }
 .vignette .texte {
   padding: 22px 8px 40px;

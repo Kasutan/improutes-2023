@@ -127,6 +127,7 @@ function kasutan_vignette_image( $size = 'medium' ) {
 		$image_id=get_post_thumbnail_id();
 		$classe='';
 	} else if(function_exists('get_field')) {
+
 		$banniere=get_field('improutes_banniere_image');
 		if($banniere) {
 			$image_id=$banniere;
@@ -134,7 +135,7 @@ function kasutan_vignette_image( $size = 'medium' ) {
 		} else {
 			$logo=get_field('improutes_logo_1','option');
 			if($logo) {
-				$image_id=$logo_footer;
+				$image_id=$logo;
 				$classe='contain';
 			}
 		}

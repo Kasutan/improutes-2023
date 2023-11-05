@@ -42,11 +42,25 @@
 		}
 	}
 
-	img {
+	.vignette-image {
 		height:36rem;
-		object-fit: cover;
-		width:100%;
+		img {
+			height:100%;
+			object-fit: cover;
+			width:100%;
+		}
+		&.contain {
+			//fallback post sans thumbnail
+			img {
+				margin:auto;
+				object-fit: contain;
+				width:90%;
+			}
+		}
 	}
+	
+
+	
 	.texte {
 		padding: 22px 8px 40px;
 		text-align: center;
