@@ -4,24 +4,28 @@
 	justify-content: center;
 	list-style:none;
 	padding:0 var(--padding-x);
-	margin:var(--margin-y-1) 0;
+	margin:0 0 7rem;
+
+	@include bp(lg) {
+		margin-bottom: 10.7rem;
+	}
 
 	li {
 		&::after {
-			color:var(--rouge);
+			color:var(--marron);
 			content: '-';
 			display: inline-block;
-			@include fs(20);
-			font-weight: 700;
+			font-size: 2.5rem;
+			font-weight: 600;
 		}
 		&:last-of-type::after {
 			display: none;
 		}
 	}
 	a.page {
-		@include fs(20);
-		color:var(--rouge);
-		font-weight: 700;
+		color:var(--marron);
+		font-size: 2.5rem;
+		font-weight: 600;
 		margin:0 0.5rem;
 		padding:0.5rem;
 		text-decoration: none;
@@ -32,6 +36,7 @@
 	}
 
 	li.active a {
+		font-weight: 800;
 		text-decoration: underline;
 	}
 
