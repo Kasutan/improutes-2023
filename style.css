@@ -2617,15 +2617,14 @@ form.search-form.search-topbar input.search-submit {
 .filtre-archive {
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
-  padding-top: 2rem;
+  flex-direction: column;
 }
 .filtre-archive label {
-  color: var(--rouge);
+  color: var(--marron);
   cursor: pointer;
-  font-size: calc(20 * var(--taille-texte) / 15);
-  font-weight: 400;
-  margin: 0 1.5rem 1rem 0;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 0.5em;
   padding: 0;
   position: relative;
   transition: all 0.4s linear;
@@ -2654,12 +2653,13 @@ form.search-form.search-topbar input.search-submit {
   text-decoration: underline;
 }
 .filtre-archive input:checked + label {
-  font-weight: 700;
+  font-weight: 800;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .filtre-archive {
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 2rem;
   }
   .filtre-archive label {
     padding: 0.5rem 2.5rem;

@@ -1,14 +1,13 @@
 .filtre-archive {
 	align-items: center;
-	display:flex;
-	flex-wrap:wrap;
-	padding-top: 2rem;
+	display: flex;
+	flex-direction: column;
 	label {
-		color:var(--rouge);
+		color:var(--marron);
 		cursor: pointer;
-		@include fs(20);
-		font-weight: 400;
-		margin:0 1.5rem 1rem 0;
+		font-size: 2.4rem;
+		font-weight: 500;
+		margin-bottom: 0.5em;
 		padding:0;
 		position: relative;
 		transition: all 0.4s linear;
@@ -25,12 +24,13 @@
 		}
 	}
 	input:checked + label {
-		font-weight: 700;
+		font-weight: 800;
 	}
 
-	@include bp(lg) {
+	@include bp(md) {
+		flex-direction: row;
+		flex-wrap:wrap;
 		justify-content: center;
-		margin-bottom:2rem;
 		label {
 			padding:0.5rem 2.5rem;
 		}
