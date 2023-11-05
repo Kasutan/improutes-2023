@@ -57,7 +57,7 @@ function kasutan_get_cat_et_couleur($contexte='archive') {
 	}
 	if( !empty( $term ) && ! is_wp_error( $term ) ) {
 		$reponse['nom']=$term->name;
-		$reponse['url']=get_term_link($term);
+		$reponse['url']=get_term_link($term); //TODO remplacer par url de la page actu avec activation JS du filtre
 		$reponse['couleur']=esc_attr(get_field('couleur',$term));
 	}
 	
@@ -323,17 +323,6 @@ function kasutan_actus_banniere() {
 	kasutan_page_banniere($actus);
 }
 
-/**
-* Image mise en avant
-*
-*/
-function kasutan_affiche_thumbnail_dans_contenu() {
-	if(has_post_thumbnail()) {
-		echo '<div class="thumbnail">';
-			the_post_thumbnail( 'large');
-		echo '</div>';
-	}
-}
 
 /**
 * Filtre par catégories pour les archives de blog

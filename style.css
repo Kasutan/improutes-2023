@@ -2456,54 +2456,83 @@ form.search-form.search-topbar input.search-submit {
 }
 
 .single-title {
-  align-items: flex-start;
-  display: flex;
-  margin: 0;
+  color: var(--blanc);
 }
-.single-title::before {
-  flex-basis: 3.6rem;
-  flex-grow: 0;
-  flex-shrink: 0;
-  top: 0;
-}
-
-.single-date {
-  color: var(--vert);
-  margin-bottom: 3rem;
-  padding-left: 4.2rem;
+.single-title::after {
+  display: none;
 }
 
 .single-post div.entry-content {
-  padding-bottom: var(--margin-y-1);
-  padding-top: var(--margin-y-1);
+  padding-bottom: var(--margin-y);
+  padding-top: var(--margin-y);
+}
+.single-post .bandeau {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 3rem;
+}
+@media (min-width: 1920px) {
+  .single-post .bandeau {
+    width: var(--largeur-max);
+  }
+}
+.single-post .col {
+  color: var(--blanc);
+  padding: 2rem;
 }
 .single-post .thumbnail {
-  margin-bottom: var(--margin-y-1);
+  position: relative;
+}
+.single-post .thumbnail .cat {
+  color: var(--blanc);
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding: 4px 33px 8px;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  top: 6rem;
+}
+.single-post .thumbnail .cat:hover, .single-post .thumbnail .cat:focus {
+  color: var(--blanc);
+  text-decoration: underline;
 }
 .single-post .thumbnail img {
-  margin: 0 auto;
+  object-fit: cover;
+  width: 100%;
 }
 .single-post .retour {
-  font-size: calc(20 * var(--taille-texte) / 15);
+  color: var(--marron);
+  font-size: 2.4rem;
+  font-weight: 700;
   text-align: center;
 }
 @media (min-width: 768px) {
-  .single-post .entry-content {
+  .single-post .bandeau {
     display: grid;
-    column-gap: 40px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 60%;
   }
-  .single-post .retour {
-    grid-column: 1/span 2;
-    margin-top: var(--margin-y-1);
+  .single-post .thumbnail {
+    grid-column: 1;
   }
-  .single-post.no-thumbnail .entry-content {
+  .single-post .thumbnail img {
+    height: 100%;
+  }
+  .single-post .col {
+    grid-column: 2;
+  }
+  .single-post.no-thumbnail .bandeau {
     display: block;
   }
 }
 @media (min-width: 1024px) {
-  .single-post .entry-content {
-    grid-template-columns: 60% 40%;
+  .single-post .col {
+    padding: 5rem;
+    padding-right: calc(100% - 52rem);
   }
 }
 
