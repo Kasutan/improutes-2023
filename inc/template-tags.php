@@ -56,9 +56,14 @@ function kasutan_get_cat_et_couleur($contexte='archive') {
 		$term = ea_first_term();
 	}
 	if( !empty( $term ) && ! is_wp_error( $term ) ) {
+
 		$reponse['nom']=$term->name;
-		$reponse['url']=get_term_link($term); //TODO remplacer par url de la page actu avec activation JS du filtre
+		
 		$reponse['couleur']=esc_attr(get_field('couleur',$term));
+
+		//Construction de l'url : on renvoie vers la page des actus en activant le filtre
+		$actus=get_option( 'page_for_posts' ) ;
+		$reponse['url']=get_the_permalink($actus).'?filtre_cat='.$term->slug;
 	}
 	
 	return $reponse;

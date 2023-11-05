@@ -73,6 +73,7 @@ function kasutan_single_entry_content_after(){
 	echo '</div>';
 
 	//Et glisser un lien vers toutes les actualités
+	//TODO vérifier version EN
 	$actus=get_option( 'page_for_posts' ) ;
 	printf('<div class="retour"><a href="%s">Retour aux actualités</a></div>',get_the_permalink($actus));
 }
