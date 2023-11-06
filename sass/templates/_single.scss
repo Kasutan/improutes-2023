@@ -17,7 +17,7 @@
 		flex-direction: column-reverse;
 		margin-bottom: 3rem;
 	}
-	.col {
+	.entry-content .col {
 		color:var(--blanc);
 		padding:2rem;
 	}
@@ -65,7 +65,7 @@
 				height:100%;
 			}
 		}
-		.col {
+		.entry-content .col {
 			grid-column: 2;
 		}
 		&.no-thumbnail {
@@ -76,7 +76,7 @@
 	}
 
 	@include bp(lg) {
-		.col {
+		.entry-content .col {
 			padding:5rem;
 			padding-right:calc(100% - 52rem);
 
