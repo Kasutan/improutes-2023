@@ -14,6 +14,8 @@
 
 		var resultats=$('.list, .pagination');
 
+		//uniformiser les hauteurs de titres des vignettes à la mise en place de la liste
+		hTitres();
 
 		$('.filtre-archive').change(function(){
 			$(resultats).animate(
@@ -80,6 +82,9 @@
 		//lier les écouteurs à chaque fois que la liste est mise à jour + attendre un peu pour que les liens de navigation soient reconstruits
 		listePosts.on('updated',function(e) {
 			setTimeout(bindScroll,1000);
+
+			//uniformiser les hauteurs de titres des vignettes quand un filtre est activé ou qu'on a changé de page
+			hTitres();
 		})
 
 		function bindScroll() {
@@ -89,6 +94,26 @@
 					}, 500);
 			});
 		}
+
+
+		/****************** Uniformiser titres vignettes*************************/
+		function hTitres() {
+			console.log('uniformiser titres')
+			var titres=$('.titre-wrap');
+			if($(titres).length >0) {
+				var maxH=0;
+				$(titres).each(function(index,elem) {
+					if($(elem).outerHeight() > maxH) {
+						maxH=$(elem).outerHeight();
+					}
+				})
+				if(maxH > 0) {
+					console.log('maxH',maxH);
+					$(titres).css('height',maxH+'px');
+				}
+			}
+		}
+	
 
 		//Mettre à jour l'url de la page
 		function updateURL(value) {

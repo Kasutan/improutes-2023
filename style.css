@@ -2524,6 +2524,11 @@ form.search-form.search-topbar input.search-submit {
   .single-post.no-thumbnail .bandeau {
     display: block;
   }
+  .single-post.no-thumbnail .entry-content .col {
+    --pno:calc((100% - 47rem) / 2);
+    padding-left: var(--pno);
+    padding-right: var(--pno);
+  }
 }
 @media (min-width: 1024px) {
   .single-post .entry-content .col {

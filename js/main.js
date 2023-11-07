@@ -45,19 +45,6 @@
 		$(siteHeader).addClass('js-sticky');
 		siteContent.css('margin-top',siteHeader.outerHeight());
 
-		/****************** Uniformiser titres vignettes*************************/
-		var titres=$('.titre-wrap');
-		if($(titres).length >0) {
-			var maxH=0;
-			$(titres).each(function(index,elem) {
-				if($(elem).outerHeight() > maxH) {
-					maxH=$(elem).outerHeight();
-				}
-			})
-			if(maxH > 0) {
-				$(titres).css('height',maxH+'px');
-			}
-		}
 
 		/****************** Helpers formulaire *************************/	
 		
