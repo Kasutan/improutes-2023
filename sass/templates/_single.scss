@@ -17,9 +17,14 @@
 		flex-direction: column-reverse;
 		margin-bottom: 3rem;
 	}
-	.entry-content .col {
-		color:var(--blanc);
-		padding:2rem;
+	.entry-content {
+		.col {
+			color:var(--blanc);
+			padding:2rem;
+		}
+		blockquote {
+			border-left-color: var(--blanc);
+		}
 	}
 	.thumbnail {
 		position: relative;

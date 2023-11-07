@@ -2476,6 +2476,9 @@ form.search-form.search-topbar input.search-submit {
   color: var(--blanc);
   padding: 2rem;
 }
+.single-post .entry-content blockquote {
+  border-left-color: var(--blanc);
+}
 .single-post .thumbnail {
   position: relative;
 }
