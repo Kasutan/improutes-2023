@@ -23,7 +23,6 @@ $texte=wp_kses_post( get_field('texte') );
 $titre=wp_kses_post( get_field('titre') );
 
 //Document à télécharger
-$desc=wp_kses_post(get_field('description'));
 $file = get_field('file');
 
 
@@ -50,7 +49,7 @@ printf('<section class="acf livre %s">', $className);
 		
 		if(function_exists('kasutan_affiche_bloc_telecharger') && $file) {
 			echo '<div class="fichier">';
-				kasutan_affiche_bloc_telecharger(false,$file,$desc);
+				kasutan_affiche_bloc_telecharger(false,$file);
 			echo '</div>';
 		}
 	echo '</div>';

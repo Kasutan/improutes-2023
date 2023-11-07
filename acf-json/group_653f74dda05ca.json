@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "open": 0,
+            "open": 1,
             "multi_expand": 0,
             "endpoint": 0
         },
@@ -38,7 +38,7 @@
                 "orange": "orange",
                 "transparent": "transparent"
             },
-            "default_value": "orange",
+            "default_value": "transparent",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
@@ -52,7 +52,7 @@
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -61,7 +61,7 @@
             },
             "layout": "block",
             "pagination": 0,
-            "min": 0,
+            "min": 1,
             "max": 0,
             "collapsed": "field_653f7ccb55464",
             "button_label": "Ajouter un élément",
@@ -82,27 +82,6 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_653f7cbd55463"
-                },
-                {
-                    "key": "field_6540bfdf95a9a",
-                    "label": "Description du fichier (type et taille)",
-                    "name": "description",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "Document Adobe Acrobat 1.0 MB",
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
@@ -151,5 +130,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699207320
+    "modified": 1699373660
 }

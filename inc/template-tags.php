@@ -384,11 +384,45 @@ function kasutan_affiche_filtre_articles() {
 
 //Utilisée dans le bloc livre et dans le bloc télécharger
 
-function kasutan_affiche_bloc_telecharger($titre,$file,$desc) {
+function kasutan_affiche_bloc_telecharger($titre,$file) {
+	if(!$file || empty($file)) {
+		return;
+	}
+
+	$type=false;
+	//Traduction
+	$label_bouton='Télécharger';
+	if($file['subtype']=='pdf') {
+		$type="Document Adobe Acrobat [%s]";
+	}
+
+	if(KPLL && pll_current_language()=='en') {
+		$label_bouton='Download';
+		if($file['subtype']=='pdf') {
+			$type="Adobe Acrobat Document [%s]";
+		}
+	}
+	
+	//Préparer automatiquement la taille
+	$taille_k=$file['filesize']/1000;
+	if($taille_k < 1000) {
+		$taille=round($taille_k,1).' KB';
+	} else {
+		$taille_m=$taille_k/1000;
+		$taille=round($taille_m,1).' MB';
+	}
+
+	if($type) {
+		$desc_auto=sprintf($type,$taille);
+	} else {
+		$desc_auto=sprintf("Document [%s]",$taille);
+	}
+
+
 	if($titre) printf('<span><strong>%s</strong></span>',$titre);
-	if($file) printf('<span>%s</span>',$file['filename']);
-	if($desc) printf('<span>%s</span>',$desc);
-	if($file) printf('<a href="%s" class="bouton pdf" target="_blank" rel="noopener noreferrer">Télécharger</a>',$file['url']);
+	printf('<span>%s</span>',$file['filename']);
+	printf('<span>%s</span>',$desc_auto);
+	printf('<a href="%s" class="bouton pdf" target="_blank" rel="noopener noreferrer">%s</a>',$file['url'],$label_bouton);
 }
 
 /**

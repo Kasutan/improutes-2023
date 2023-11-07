@@ -171,26 +171,6 @@
             "min_size": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_65412e790d022",
-            "label": "Description du fichier (type et taille)",
-            "name": "description",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Document Adobe Acrobat 1.0 MB",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
         }
     ],
     "location": [
@@ -211,5 +191,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698771656
+    "modified": 1699373619
 }

@@ -230,7 +230,7 @@ class BE_ACF_Customizations {
 			'Bloc sur fond orange ou transparent avec documents PDF à télécharger.',
 			'art', 
 			false,
-			array('telecharger', 'pdf', 'télécharger')
+			array('telecharger', 'pdf', 'télécharger','pdfg')
 		);
 
 		/*********Bloc comité scientifique ***************/

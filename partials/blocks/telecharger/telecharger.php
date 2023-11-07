@@ -21,14 +21,13 @@ if(have_rows('docs') && function_exists('kasutan_affiche_bloc_telecharger')) :
 
 		while (have_rows('docs')) : the_row();
 			$titre=wp_kses_post(get_sub_field('titre'));
-			$desc=wp_kses_post(get_sub_field('description'));
 			$file = get_sub_field('file');
 
 			if($file) :
 
 				echo '<li>';
 				
-				kasutan_affiche_bloc_telecharger($titre,$file,$desc);
+				kasutan_affiche_bloc_telecharger($titre,$file);
 
 
 				echo '</li>';
