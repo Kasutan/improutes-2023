@@ -83,8 +83,9 @@ form.search-form {
 	}
 }
 
-.no-results{
+section.no-results{
 	min-height:50vh;
+	padding-top: 1px;
 	.entry-title {
 		padding-top:var(--margin-y-1);	
 	}
