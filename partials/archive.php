@@ -10,8 +10,14 @@
 
 //On récupère une éventuelle info sur le tag html passée en $args de get_template_part
 $tag='li';
+$tag_titre='h2';
 if(!empty($args) && array_key_exists('tag',$args)) {
 	$tag=$args['tag'];
+}
+
+if($tag==='div') {
+	//on est dans le carousel
+	$tag_titre='h3';
 }
 
 printf('<%s class="vignette">',$tag);
@@ -43,7 +49,7 @@ printf('<%s class="vignette">',$tag);
 		printf('<div class="texte has-%s-background-color">',$infos_cat['couleur']);
 		
 			echo '<div class="titre-wrap">';
-				printf('<h2 class="titre">%s</h2>',get_the_title());
+				printf('<%s class="titre">%s</%s>',$tag_titre,get_the_title(),$tag_titre);
 
 				printf('<p class="date">%s</p>', get_the_date("d.m.Y"));
 			echo '</div>';

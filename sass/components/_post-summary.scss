@@ -84,6 +84,11 @@
 	}
 
 	@include bp(lg) {
+		.vignette-image {
+			aspect-ratio: 1;
+			height:unset;
+			overflow: hidden;
+		}
 		.texte {
 			flex-grow: 1;
 		}

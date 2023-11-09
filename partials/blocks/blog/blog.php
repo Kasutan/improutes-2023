@@ -18,7 +18,7 @@ $titre=wp_kses_post( get_field('titre') );
 
 $articles=new WP_Query(array(
 	'post_type' => 'post',
-	'posts_per_page' => '3',
+	'posts_per_page' => '4',
 	'orderby' => 'date',
 	'order' => 'DESC'
 ));
@@ -31,7 +31,7 @@ printf('<section class="acf blog %s">', $className);
 		return;
 	}
 
-	printf('<h2 class="titre-section h1 has-rouge-color">%s</h2>',$titre);
+	printf('<h2 class="titre-section">%s</h2>',$titre);
 
 	echo '<div class="loop">';
 	while ( $articles->have_posts() ) {
@@ -42,9 +42,18 @@ printf('<section class="acf blog %s">', $className);
 	echo '</div>';
 	wp_reset_postdata();
 
+
 	$actus=get_option( 'page_for_posts' );
 	if($actus) {
-		printf('<div class="text-center"><a href="%s?filtre_cat=toutes">Voir toutes nos actualités</a></div>',get_the_permalink( $actus));
+		
+		$label="Voir toutes nos actualités";
+		$filtre="toutes";
+		if(KPLL && pll_current_language()=='en') {
+			$label="Read all news";
+			$filtre="all";
+		}
+
+		printf('<a href="%s?filtre_cat=%s" class="bouton">%s</a>',get_the_permalink( $actus),$filtre,$label);
 	}
 
 echo '</section>';

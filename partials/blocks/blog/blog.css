@@ -1,36 +1,56 @@
 .blog {
-  margin: 40px 0;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: var(--margin-y);
+}
+@media (min-width: 1920px) {
+  .blog {
+    width: var(--largeur-max);
+  }
 }
 .blog .titre-section {
+  font-size: 4rem;
+  font-weight: 100;
+  position: relative;
   text-align: center;
+  text-transform: uppercase;
+  position: relative;
 }
-.blog .owl-carousel .owl-item .entry-date img {
-  width: 22px;
+.blog .titre-section b, .blog .titre-section strong {
+  font-weight: 700;
 }
-.blog .owl-carousel .owl-item {
-  padding: 0 2.8rem;
+.blog .titre-section::after {
+  background-image: url("/wp-content/themes/improutes-2023/icons/sous-titre-home.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 16px 0 40px;
+  position: relative;
+  width: 100%;
 }
-.blog .post-summary {
-  margin: 0 auto var(--margin-y-1);
+.blog .loop {
+  padding-top: 0;
+}
+.blog .vignette {
+  margin: 0 auto;
   max-width: 46rem;
 }
-.blog .picto-cat {
-  display: none;
+.blog a.bouton:not(.pdf) {
+  margin: 2rem auto;
 }
 .blog .owl-nav {
-  --size:4rem;
-  --marge:1.5rem;
+  --size:4.3rem;
+  --marge:-2rem;
   display: flex;
   justify-content: space-between;
   left: 0;
   position: absolute;
-  top: 50%;
+  top: 300px;
   width: 100%;
-}
-@media (min-width: 768px) {
-  .blog .owl-nav {
-    --marge:0;
-  }
 }
 .blog .owl-nav button {
   background-color: transparent;
@@ -41,7 +61,7 @@
   position: relative;
 }
 .blog .owl-nav button span {
-  background-image: url("angle.svg");
+  background-image: url("angle-cercle.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -49,6 +69,11 @@
   display: block;
   height: var(--size);
   width: var(--size);
+}
+@media screen and (min-width: 500px) {
+  .blog .owl-nav button span {
+    background-image: url("angle.svg");
+  }
 }
 .blog .owl-nav button.owl-prev {
   left: calc(-1 * var(--marge));

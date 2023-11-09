@@ -3,12 +3,30 @@
     "title": "Bloc blog",
     "fields": [
         {
+            "key": "field_654d24a28e4c7",
+            "label": "Bloc blog",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "Section avec titre principal et les quatre derniers articles publiés sur le blog. Carrousel sur petits écrans.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
             "key": "field_609ec1f909440",
             "label": "Titre de la section",
             "name": "titre",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "Placer les mots à afficher en gras entre balises b",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -17,10 +35,10 @@
                 "id": ""
             },
             "default_value": "Blog",
-            "placeholder": "",
+            "maxlength": "",
+            "placeholder": "texte en police fine <b>texte en gras<\\b>",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         }
     ],
     "location": [
@@ -41,5 +59,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674056544
+    "modified": 1699554561
 }

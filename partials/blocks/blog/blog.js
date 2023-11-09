@@ -6,7 +6,7 @@
 		var width=$(window).width();
 		var owl=$('.acf.blog .loop');
 		//Carrousel en mobile et tablette uniquement
-		if(width < 960 ) {
+		if(width < 1024 ) {
 			$(owl).addClass('owl-carousel');
 			owl.owlCarousel({
 				loop:true,

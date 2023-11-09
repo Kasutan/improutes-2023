@@ -297,7 +297,7 @@ class BE_ACF_Customizations {
 		$this->helper_register_block_type( 
 			'blog',
 			'Bloc blog',
-			'Section avec titre principal et les trois derniers articles publiés sur le blog. Carrousel sur petits écrans.',
+			'Section avec titre principal et les quatre derniers articles publiés sur le blog. Carrousel sur petits écrans.',
 			'art', 
 			true, //JS pour carrousel mobile
 			array('blog', 'article', 'accueil')
