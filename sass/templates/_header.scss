@@ -64,7 +64,18 @@
 }
 
 //Header sticky toutes tailles d'écran
-.site-header.js-sticky {
+
+
+//Magic numbers
+body {
+	--hauteur-header:129px;
+	@include bp(lg) {
+	}
+	@include bp(xl) {
+	}
+}
+
+.site-header {
 	box-shadow: 0 3px 3px rgba(18,75,90,0.2);
 	position:fixed;
 	left: 0;
@@ -77,10 +88,15 @@
 	}
 }
 
+
+.site-main {
+	margin-top: var(--hauteur-header);
+}
+
 #wpadminbar {
 	position: fixed;
 }
-.admin-bar .site-header.js-sticky {
+.admin-bar .site-header {
 	top:46px;
 	@include bp(md) {
 		top:32px;

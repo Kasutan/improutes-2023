@@ -2023,7 +2023,10 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
     height: 100%;
   }
 }
-.site-header.js-sticky {
+body {
+  --hauteur-header:129px;
+}
+.site-header {
   box-shadow: 0 3px 3px rgba(18, 75, 90, 0.2);
   position: fixed;
   left: 0;
@@ -2031,21 +2034,25 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   width: 100%;
 }
 @media (min-width: 1920px) {
-  .site-header.js-sticky {
+  .site-header {
     left: calc((100vw - var(--largeur-max)) / 2);
     width: var(--largeur-max);
   }
+}
+
+.site-main {
+  margin-top: var(--hauteur-header);
 }
 
 #wpadminbar {
   position: fixed;
 }
 
-.admin-bar .site-header.js-sticky {
+.admin-bar .site-header {
   top: 46px;
 }
 @media (min-width: 768px) {
-  .admin-bar .site-header.js-sticky {
+  .admin-bar .site-header {
     top: 32px;
   }
 }
