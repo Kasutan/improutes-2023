@@ -2443,9 +2443,8 @@ form.search-form.search-topbar input.search-submit {
   }
 }
 
-.search-results li.product {
-  margin-bottom: var(--margin-y-2);
-  text-align: left;
+.search-results .vignette {
+  margin-bottom: 2rem;
 }
 
 .no-results {

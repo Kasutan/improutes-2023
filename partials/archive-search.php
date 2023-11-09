@@ -4,33 +4,57 @@
  *
 **/
 
-//TODO réutiliser partials/archive.php
+//simplification de partials/archive.php
 
 $post_type=get_post_type();
-if($post_type==='product') {
-	$label_suite="Voir le produit";
-} else {
-	$label_suite="Lire la suite";
-}
-printf('<li class="post-summary %s">',$post_type);
 
-	if(function_exists('kasutan_vignette_image')) {
-		kasutan_vignette_image();
+if($post_type==="post") {
+	$is_post=true;
+	$infos_cat=array('nom'=>'Autres','couleur'=>'rouge');
+
+	if(function_exists('kasutan_get_cat_et_couleur')) {
+		$infos_cat=kasutan_get_cat_et_couleur();
+		$couleur=$infos_cat['couleur'];
 	}
+} else {
+	$is_post=false;
 
-	echo '<div class="post-summary__content">';
-		//ea_entry_category('archive');
-		if($post_type==='post') {
-			printf('<p class="entry-date">%s</p>',get_the_date('d/m/Y'));
+	//couleur aléatoire
+	$couleurs=['rouge','bleu','vert','orange'];
+	$index=rand(0,3);
+	$couleur=$couleurs[$index];
+
+}
+
+printf('<li class="vignette %s">',$post_type);
+$url=esc_url( get_permalink( ) );
+
+	printf('<a href="%s" class="lien">',$url);
+
+		if(function_exists('kasutan_vignette_image')) {
+			kasutan_vignette_image();
 		}
 		
-		ea_post_summary_title();
-		the_excerpt();
-		if($post_type==='product') {
-			global $product;
-			printf('<p class="price">%s</p>', $product->get_price_html());
-		} 
-		printf('<a href="%s" class="suite">%s<span class="screen-reader-text">de %s</span><span class="chevrons-suite">>>></span></a>',get_the_permalink(),$label_suite,get_the_title());
-	echo '</div>';
+
+		printf('<div class="texte has-%s-background-color">',$couleur);
+
+		
+			echo '<div class="titre-wrap">';
+				printf('<h2 class="titre">%s</h2>',get_the_title());
+				if($is_post) {
+					printf('<p class="date">%s</p>', get_the_date("d.m.Y"));
+				}
+			echo '</div>';
+
+			$extrait=wpautop(get_the_excerpt());
+			printf('<div class="extrait">%s</div>',$extrait);
+		
+		echo '</div>';
+
+	echo '</a>';
+
+	if($is_post) {
+		printf('<a href="%s" class="cat"><div class="fond has-%s-background-color"></div><span>%s</span></a>',$infos_cat['url'],$infos_cat['couleur'],$infos_cat['nom']);
+	}
 
 echo '</li>';

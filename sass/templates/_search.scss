@@ -78,9 +78,8 @@ form.search-form {
 }
 
 .search-results {
-	li.product {
-		margin-bottom: var(--margin-y-2);
-		text-align: left;
+	.vignette {
+		margin-bottom: 2rem;
 	}
 }
 
