@@ -124,17 +124,17 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	background-color: rgba(58,124,50,0.1);
+	background-color: var(--orange-input);
 	color: var(--noir);
 	border: none;
-	outline-color:var(--vert);
-	min-height:1.7rem;
+	outline-color:var(--orange);
+	min-height:4rem;
 	padding: 3px;
 	padding-left: 10px;
 	
 	&:focus {
 		outline:solid 1px;
-		outline-color:var(--vert);
+		outline-color:var(--orange);
 	}
 }
 
@@ -162,12 +162,13 @@ textarea {
 		grid-column-end: -1;
 	}
 	.forminator-error-message {
-		@include fs(12);
 		color:var(--rouge);
 	}
 
 	/*Styles communs à tous les champs*/
-	@include fs(14);
+	font-size: 2rem;
+	font-weight: 400;
+	
 
 
 	label {
@@ -180,9 +181,7 @@ textarea {
 		width:100%;
 	}
 
-	input[type="radio"] {
-		@include screen-reader-text;
-	}
+	
 
 	/*Styles des champs téléphone*/
 
@@ -190,60 +189,14 @@ textarea {
 		width:100%;
 	}
 
-	/*Styles des champs radio*/
-
-	.forminator-field[role="radiogroup"] {
-		--couleur:var(--vert);
-		--size:15px;
-		display: flex;
-		flex-wrap: wrap;
-		
-		label {
-			margin-bottom: 0;
-		}
-		
-		.forminator-label {
-			margin-right: 20px;
-		}
-		.forminator-radio-inline {
-			align-items: center;
-			display: flex;
-			flex-direction: row;
-			margin-right: 20px;
-		}
-		
-		.forminator-radio-bullet {
-			align-items:center;
-			display: contents;
-			&::after {
-				align-items: center;
-				background-color: rgba(196, 196, 196, 0.1);
-				border: 1px solid var(--vert);
-				color:var(--vert);
-				content:' ';
-				display: flex;
-				margin-right: 5px;
-				width:var(--size);
-				height:var(--size);
-			}
-		
-		}
-		input:checked + .forminator-radio-bullet::after {
-			content:'✔';
-		}
-		input:focus-visible + .forminator-radio-bullet::after {
-			outline: dotted 2px var(--vert);
-			outline-offset: 1px;
-		}
-	}
-
+	
 	.forminator-row-last
 	{
 		grid-column: 1 / span 2;
 		.forminator-field {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: flex-end;
+			justify-content: flex-start;
 		}
 	}
 	.h-captcha {
@@ -251,31 +204,7 @@ textarea {
 		margin-bottom: 20px;
 	}
 
-	/*Styles du champ file upload*/
-	.file {
-		.forminator-label {
-			color:var(--rouge);
-			@include fs(20);
-			font-weight: 700;
-		}
-		.forminator-input-file  {
-			@include fs(16);
-		}
-	}
-	.forminator-uploaded-file--content {
-		margin: 20px 0;
-		background: var(--fond);
-		display: flex;
-		justify-content: space-between;
-		padding: 10px;
-		.forminator-uploaded-file--image {
-			display: none;
-		}
-		button {
-			min-width: unset;
-		}
-	}
-
+	
 	
 }
 
