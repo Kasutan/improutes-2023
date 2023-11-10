@@ -94,12 +94,19 @@ function kasutan_main_footer() {
 */
 add_action( 'tha_footer_bottom', 'kasutan_copyright' );
 function kasutan_copyright() {
+
+	$by = 'Site internet réalisé par 40 degrés sur la banquise';
+
+	if(KPLL && pll_current_language()=='en') {
+		$by = 'Website design by 40 degrés sur la banquise';
+
+	}
 	echo '<div class="copyright">';
 		printf('<span class="titre">%s %s</span>',get_option('blogname'), date('Y'));
 		echo '<span class="sep">-</span>';
 		if(has_nav_menu('footer-legal')) {
 			wp_nav_menu( array( 'theme_location' => 'footer-legal', 'menu_id' => 'footer-legal', 'container_class' => 'nav-footer' ) );
 		}
-		echo ('<a class="agence" href="https://banquise.com/" rel="noopener noreferrer" target="_blank">Site internet réalisé par 40 degrés sur la banquise</a>');
+		printf('<a class="agence" href="https://banquise.com/" rel="noopener noreferrer" target="_blank">%s</a>',$by);
 	echo '</div>';
 }
