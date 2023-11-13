@@ -347,6 +347,9 @@ function kasutan_affiche_filtre_articles() {
 		if(KPLL && pll_current_language()=='en') {
 			$label_all="All";
 		}
+
+		
+
 		?>
 		<input type="radio" id="toutes" name="filtre-categorie" value="toutes" checked>
 		<?php
@@ -361,6 +364,17 @@ function kasutan_affiche_filtre_articles() {
 					$classe="avec-pictos";
 				}
 			}
+
+
+			$pluriel=false;
+			if(function_exists('get_field')) {
+				$pluriel=esc_attr(get_field('pluriel',$term));
+			}
+			if(!$pluriel) {
+				$pluriel=$term->name;
+			}
+
+
 			
 
 			printf('<input type="radio" id="%s" name="filtre-categorie" value="%s">',
@@ -371,7 +385,7 @@ function kasutan_affiche_filtre_articles() {
 				$term->slug,
 				$classe,
 				$pictos,
-				$term->name
+				$pluriel
 			);
 		endforeach;
 		?>
