@@ -97,10 +97,11 @@
 
 
 		/****************** Uniformiser titres vignettes*************************/
+		var width=$(window).width();
+
 		function hTitres() {
-			console.log('uniformiser titres')
 			var titres=$('.titre-wrap');
-			if($(titres).length >0) {
+			if(width > 1023 && $(titres).length >0) {
 				var maxH=0;
 				$(titres).each(function(index,elem) {
 					if($(elem).outerHeight() > maxH) {
