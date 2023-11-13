@@ -20,6 +20,9 @@
 	.entry-content {
 		.col {
 			color:var(--blanc);
+			a, a:visited {
+				color:var(--blanc);
+			}
 			padding:2rem;
 		}
 		blockquote {

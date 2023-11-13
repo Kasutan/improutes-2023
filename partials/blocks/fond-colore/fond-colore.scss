@@ -28,6 +28,10 @@
 		padding:2rem 3rem;
 		position: relative;
 		z-index: 1;
+
+		a, a:visited {
+			color:var(--blanc);
+		}
 		
 	}
 	&.flottant {

@@ -33,6 +33,9 @@
   color: var(--blanc);
   padding: 2.2rem var(--padding-x) 4.2rem;
 }
+.livre .col-texte a, .livre .col-texte a:visited {
+  color: var(--blanc);
+}
 .livre h2 {
   margin-bottom: 1em;
 }

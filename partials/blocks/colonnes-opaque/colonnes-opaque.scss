@@ -10,6 +10,9 @@
 	ul:not([class]) li::marker {
 		color:var(--blanc);
 	}
+	a, a:visited {
+		color:var(--blanc);
+	}
 	.image {
 		width:100%;
 		img {

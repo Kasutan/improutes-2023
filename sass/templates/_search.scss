@@ -11,10 +11,18 @@ form.search-form {
 		height: 42px;
 		padding:0 10px;
 		width:100%;
+
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 	}
 	input.search-submit {
 		margin-bottom: 0;
 		min-width: unset;
+
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 	}
 
 	&.search-topbar {

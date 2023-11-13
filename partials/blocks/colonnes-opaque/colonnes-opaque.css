@@ -16,6 +16,9 @@
 .colonnes-opaque ul:not([class]) li::marker {
   color: var(--blanc);
 }
+.colonnes-opaque a, .colonnes-opaque a:visited {
+  color: var(--blanc);
+}
 .colonnes-opaque .image {
   width: 100%;
 }

@@ -35,6 +35,9 @@
   position: relative;
   z-index: 1;
 }
+.fond-colore .texte a, .fond-colore .texte a:visited {
+  color: var(--blanc);
+}
 .fond-colore.flottant {
   padding: 10.5rem var(--padding-x);
 }

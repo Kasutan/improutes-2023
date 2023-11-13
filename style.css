@@ -1439,6 +1439,7 @@ object {
 
 a,
 a:visited {
+  color: var(--texte);
   text-decoration: underline;
   transition: all var(--transition);
 }
@@ -2320,10 +2321,14 @@ form.search-form input.search-field {
   height: 42px;
   padding: 0 10px;
   width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
 }
 form.search-form input.search-submit {
   margin-bottom: 0;
   min-width: unset;
+  -webkit-appearance: none;
+  appearance: none;
 }
 form.search-form.search-topbar input.search-field {
   background-color: rgba(255, 255, 255, 0.4);
@@ -2418,6 +2423,9 @@ section.no-results .entry-title {
 .single-post .entry-content .col {
   color: var(--blanc);
   padding: 2rem;
+}
+.single-post .entry-content .col a, .single-post .entry-content .col a:visited {
+  color: var(--blanc);
 }
 .single-post .entry-content blockquote {
   border-left-color: var(--blanc);
