@@ -3,11 +3,17 @@
 	$( document ).ready(function() {
 		/*--------------------------------------------------------------
 		# Filtrer archives par catégorie
+		https://listjs.com/docs/
+		Si besoin de next et prev : https://codepen.io/gregh/pen/dJvNqb
 		--------------------------------------------------------------*/
 		var optionsListe = {
 			valueNames: ['categorie'],
 			page: 4, 
-			pagination: true
+			pagination: {
+				outerWindow:1,
+				innerWindow:2,
+			},
+		
 		};
 	
 		var listePosts = new List('archive-filtrable', optionsListe);
@@ -109,7 +115,6 @@
 					}
 				})
 				if(maxH > 0) {
-					console.log('maxH',maxH);
 					$(titres).css('height',maxH+'px');
 				}
 			}

@@ -44,7 +44,12 @@
 		cursor: default;
 		&:hover, &:focus {
 			border-color:transparent;
-			color:var(--bleu);
+			color:var(--marron);
+			text-decoration: none;
 		}
+	}
+
+	@include bp(xl) {
+		padding:0;
 	}
 }

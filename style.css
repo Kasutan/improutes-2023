@@ -2711,7 +2711,13 @@ section.no-results .entry-title {
 }
 .pagination li.disabled a:hover, .pagination li.disabled a:focus {
   border-color: transparent;
-  color: var(--bleu);
+  color: var(--marron);
+  text-decoration: none;
+}
+@media (min-width: 1440px) {
+  .pagination {
+    padding: 0;
+  }
 }
 
 .vignette {
