@@ -878,7 +878,7 @@ textarea {
   font-family: var(--font-texte);
   font-size: 1.6rem;
   font-size: var(--taille-texte);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.18;
   -webkit-font-smoothing: antialiased;
 }
@@ -2075,7 +2075,15 @@ body {
     grid-column: 2;
   }
 }
+@media (min-width: 1024px) {
+  .site-footer .main-footer {
+    column-gap: 6rem;
+  }
+}
 @media (min-width: 1440px) {
+  .site-footer .main-footer {
+    column-gap: 12rem;
+  }
   .site-footer .main-footer .selecteur {
     position: relative;
     right: -5rem;
@@ -2126,6 +2134,11 @@ body {
   .site-footer .copyright .sep {
     display: inline-block;
     margin: 0 4px;
+  }
+}
+@media (min-width: 1024px) {
+  .site-footer .copyright span, .site-footer .copyright a {
+    font-weight: 400;
   }
 }
 

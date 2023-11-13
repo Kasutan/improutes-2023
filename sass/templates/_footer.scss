@@ -69,7 +69,14 @@
 			}
 		
 		}
+
+		@include bp(lg) {
+			column-gap:6rem;
+			
+		}
 		@include bp(xl) {
+			column-gap:12rem;
+
 			.selecteur {
 				position: relative;
 				right:-5rem;
@@ -125,6 +132,12 @@
 			.sep {
 				display: inline-block;
 				margin: 0 4px;
+			}
+		}
+
+		@include bp(lg) {
+			span, a {
+				font-weight: 400;
 			}
 		}
 	}
