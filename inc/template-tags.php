@@ -207,8 +207,18 @@ function kasutan_fil_ariane() {
 			);
 		endif;
 	elseif(is_single()):
+		//Couper le titre après x carcatères
+		$limite=90;
+		$titre=strip_tags(get_the_title());
+		if(strlen($titre) > $limite) {
+			$espace=strpos($titre,' ',$limite);
+			$titre_coupe=substr($titre,0,$espace);
+			$titre_coupe.='&mldr;'; //on ajoute le caractère pour l'ellipse
+		} else {
+			$titre_coupe=$titre;
+		}
 		printf('<span class="current">%s</span>',
-			strip_tags(get_the_title())
+			$titre_coupe
 		);
 	elseif (is_category()) :  //archives catégories d'articles
 		echo '<span class="current">'.strip_tags(single_cat_title( '', false )).'</span>';
