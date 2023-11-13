@@ -196,7 +196,8 @@ function kasutan_fil_ariane() {
 		$current=get_post(get_the_ID());
 		$parent=$current->post_parent; 
 		if($parent) :
-			printf('<span class="parent">%s</span><span class="sep">></span><span class="current">%s</span>',
+			printf('<a href="%s" class="parent">%s</a><span class="sep">></span><span class="current">%s</span>',
+				get_the_permalink($parent),
 				strip_tags(get_the_title($parent)),
 				strip_tags(get_the_title())
 			);
