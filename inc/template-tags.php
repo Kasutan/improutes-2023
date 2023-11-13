@@ -88,22 +88,6 @@ function kasutan_cat_pour_filtre() {
 	printf('<span class="categorie screen-reader-text">%s</span>',implode(' ',$slugs));
 }
 
-/**
-* Picto associé à une catégorie
-*
-*/
-function kasutan_picto_categorie($term_id,$couleur="blanc") {
-	if(!function_exists('get_field')) {
-		return false;
-	}
-	if($couleur=='blanc') {
-		$champ='improutes_picto';
-	} else {
-		$champ='improutes_picto_'.$couleur;
-	}
-	return esc_attr(get_field($champ,'category_'.$term_id));
-
-}
 
 /**
  * Post Summary Title
@@ -335,7 +319,6 @@ function kasutan_actus_banniere() {
 *
 */
 function kasutan_affiche_filtre_articles() {
-	$avec_pictos=function_exists('kasutan_picto_categorie');
 	echo '<p class="screen-reader-text">Filtrer les actualités</p>';
 	echo '<form class="filtre-archive" id="filtre-liste">';
 		$terms=get_terms( array(
@@ -355,15 +338,7 @@ function kasutan_affiche_filtre_articles() {
 		<?php
 		printf('<label for="toutes" class="toutes">%s</label>',$label_all);
 		foreach($terms as $term) : 
-			$pictos=$classe='';
-			if($avec_pictos) {
-				$picto_blanc=kasutan_picto_categorie($term->term_id,'blanc');
-				$picto_bleu=kasutan_picto_categorie($term->term_id,'bleu');
-				if($picto_blanc && $picto_bleu) {
-					$pictos=sprintf('<span class="picto blanc">%s</span><span class="picto bleu">%s</span>',wp_get_attachment_image( $picto_blanc,'thumbnail'),wp_get_attachment_image( $picto_bleu,'thumbnail'));
-					$classe="avec-pictos";
-				}
-			}
+			
 
 
 			$pluriel=false;
@@ -381,10 +356,8 @@ function kasutan_affiche_filtre_articles() {
 				$term->slug,
 				$term->slug
 			);
-			printf('<label for="%s" class="%s">%s %s</label>',
+			printf('<label for="%s">%s</label>',
 				$term->slug,
-				$classe,
-				$pictos,
 				$pluriel
 			);
 		endforeach;
