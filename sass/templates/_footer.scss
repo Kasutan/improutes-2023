@@ -196,6 +196,10 @@
 		padding-left: 1rem;
 		text-align: left;
 		width: 29rem;
+
+		&:focus {
+			border: solid 2px var(--orange);
+		}
 	}
 	label {
 		@include screen-reader-text;

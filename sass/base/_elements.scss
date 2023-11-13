@@ -198,6 +198,10 @@ textarea {
 			flex-wrap: wrap;
 			justify-content: flex-start;
 		}
+
+		button:focus-visible {
+			outline-color:var(--vert);
+		}
 	}
 	.h-captcha {
 		flex-basis: 100%;

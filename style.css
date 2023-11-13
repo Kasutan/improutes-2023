@@ -1128,6 +1128,14 @@ a.wp-block-button__link.pdf {
   padding: 3px 10px 5px 32px;
   width: 11.4rem;
 }
+button.pdf:focus,
+input[type=button].pdf:focus,
+input[type=reset].pdf:focus,
+input[type=submit].pdf:focus,
+a.bouton.pdf:focus,
+a.wp-block-button__link.pdf:focus {
+  outline: solid 1px var(--blanc);
+}
 button, button:visited,
 input[type=button],
 input[type=button]:visited,
@@ -1383,6 +1391,9 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+}
+.forminator-custom-form .forminator-row-last button:focus-visible {
+  outline-color: var(--vert);
 }
 .forminator-custom-form .h-captcha {
   flex-basis: 100%;
@@ -2203,6 +2214,9 @@ body {
   text-align: left;
   width: 29rem;
 }
+.newsletter input[type=email]:focus {
+  border: solid 2px var(--orange);
+}
 .newsletter label {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -2770,9 +2784,17 @@ section.no-results .entry-title {
 }
 @media (min-width: 1024px) {
   .vignette .vignette-image {
-    aspect-ratio: 1;
     height: unset;
     overflow: hidden;
+    padding-top: 100%;
+    position: relative;
+  }
+  .vignette .vignette-image img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
   .vignette .texte {
     flex-grow: 1;

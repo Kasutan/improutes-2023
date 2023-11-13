@@ -37,6 +37,10 @@ a.wp-block-button__link {
 		padding:3px 10px 5px 32px;
 		width:11.4rem;
 
+		&:focus {
+			outline:solid 1px var(--blanc);
+		}
+
 	}
 
 
