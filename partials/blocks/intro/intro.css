@@ -28,7 +28,9 @@
   position: relative;
 }
 .intro .texte {
+  font-size: 1.6rem;
   font-weight: 600;
+  line-height: 1.3;
   position: relative;
   text-align: center;
 }

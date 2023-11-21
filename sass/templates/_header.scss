@@ -34,7 +34,7 @@
 .site-title {
 	column-gap:12px;
 	display:grid;
-	grid-template-columns: 93px 150px;
+	grid-template-columns: 93fr 150fr;
 	margin:0;
 }
 .header-navigation {
@@ -44,7 +44,7 @@
 
 @include bp(lg) {
 	.main-header {
-		--taille-logos:25.4rem;
+		--taille-logos:27rem;
 
 		padding:0 var(--padding-x);
 	}
@@ -58,9 +58,12 @@
 	.header-navigation {
 		height:100%;
 	}
+}
 
-	
-
+@include bp(xl) {
+	.main-header {
+		--taille-logos:28.5rem;
+	}
 }
 
 //Header sticky toutes tailles d'écran

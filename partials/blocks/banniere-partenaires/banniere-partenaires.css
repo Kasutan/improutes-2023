@@ -71,7 +71,7 @@
 @media (min-width: 1024px) {
   .banniere-partenaires {
     --h:369px;
-    --m:104px;
+    --m:22px;
   }
   .banniere-partenaires .logos {
     column-gap: 99px;

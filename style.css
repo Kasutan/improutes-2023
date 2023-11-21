@@ -1934,7 +1934,7 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 .site-title {
   column-gap: 12px;
   display: grid;
-  grid-template-columns: 93px 150px;
+  grid-template-columns: 93fr 150fr;
   margin: 0;
 }
 
@@ -1944,7 +1944,7 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 
 @media (min-width: 1024px) {
   .main-header {
-    --taille-logos:25.4rem;
+    --taille-logos:27rem;
     padding: 0 var(--padding-x);
   }
   .title-area {
@@ -1956,6 +1956,11 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   }
   .header-navigation {
     height: 100%;
+  }
+}
+@media (min-width: 1440px) {
+  .main-header {
+    --taille-logos:28.5rem;
   }
 }
 body {
@@ -2052,7 +2057,7 @@ body {
 }
 .site-footer .main-footer .menu li a {
   color: var(--marron);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   text-decoration: none;
   text-transform: none;
@@ -2348,7 +2353,7 @@ form.search-form.search-topbar input.search-field {
   background-color: rgba(255, 255, 255, 0.4);
   border: none;
   color: var(--blanc);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   line-height: 1;
   height: 2rem;
@@ -2389,10 +2394,12 @@ form.search-form.search-topbar input.search-submit {
 }
 @media (min-width: 1024px) {
   form.search-form.search-topbar input.search-field {
+    height: 21px;
     padding: 0 4px;
     width: 14rem;
   }
   form.search-form.search-topbar input.search-submit {
+    height: 21px;
     padding: 0 4px;
     width: 17px;
   }
