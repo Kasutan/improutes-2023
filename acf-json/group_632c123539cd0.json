@@ -108,6 +108,24 @@
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_654201eb84e79"
+                },
+                {
+                    "key": "field_655cc4e895da4",
+                    "label": "Optionnel : cible du lien",
+                    "name": "cible",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "L'image et le titre du livre dans le carrousel seront cliquables.\r\nVous pouvez cibler la zone de la page \"Librairie\" correspondant à ce livre en ajoutant une ancre au livre correspondant.\r\nPar exemple http:\/\/boje6508.odns.fr\/librairie\/#routes-2016 en ajoutant \"routes-2016\" (sans dièse) dans le bloc livre correspondant de la page librairie.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_654201eb84e79"
                 }
             ]
         }
@@ -130,5 +148,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698825037
+    "modified": 1700578790
 }

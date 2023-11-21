@@ -3,11 +3,17 @@
   margin-left: 50%;
   transform: translateX(-50%);
   margin-bottom: 5.2rem;
+  position: relative;
 }
 @media (min-width: 1920px) {
   .livre {
     width: var(--largeur-max);
   }
+}
+.livre .ancre-livre {
+  left: 0;
+  position: absolute;
+  top: -110px;
 }
 .livre .col-image {
   position: relative;

@@ -3,6 +3,13 @@
 .livre {
 	@include bleed;	
 	margin-bottom: 5.2rem;
+	position:relative;
+
+	.ancre-livre {
+		left:0;
+		position: absolute;
+		top:-110px;
+	}
 
 	.col-image {
 		position: relative;

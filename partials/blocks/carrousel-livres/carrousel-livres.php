@@ -28,23 +28,27 @@ if(function_exists('get_field')) :
 				$image_id=esc_attr(get_sub_field('image'));
 				$cible=esc_url(get_sub_field('cible'));
 
-				if($cible) {
-					printf('<a href="%s" class="slide">',$cible);
-				} else {
-					echo '<div class="slide">';
-				}
-					
-					echo wp_get_attachment_image( $image_id, 'medium');
 
+				
+				echo '<div class="slide">';
+					if($cible) {
+						printf('<a href="%s">',$cible);
+					} 
+					echo wp_get_attachment_image( $image_id, 'medium');
+					if($cible) {
+						printf('</a>');
+					} 
 					if($texte) {
-						printf('<p class="texte">%s</p>',$texte);
+						if($cible) {
+							printf('<a href="%s" class="texte">%s</a>',$cible,$texte);
+						} else {
+							printf('<p class="texte">%s</p>',$texte);
+						}
 					}
 					
-				if($cible) {
-					echo '</a>';
-				} else {
-					echo '</div>';
-				}
+				
+				echo '</div>';
+				
 			endwhile;
 			echo '</div>';
 	

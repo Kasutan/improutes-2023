@@ -171,6 +171,26 @@
             "min_size": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_655cc92066ad5",
+            "label": "Optionnel : ancre",
+            "name": "ancre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Pour arriver directement sur ce livre depuis le carrousel de la page d'accueil. Texte sans espace ni accents",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -191,5 +211,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699373619
+    "modified": 1700579688
 }

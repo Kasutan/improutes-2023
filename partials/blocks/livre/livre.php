@@ -30,10 +30,12 @@ $file = get_field('file');
 $annee=wp_kses_post( get_field('annee') );
 $image_id=esc_attr( get_field('image') );
 
-
+//Ancre
+$ancre=esc_attr( get_field('ancre') );
 
 
 printf('<section class="acf livre %s">', $className);
+	if($ancre) printf('<div id="%s" class="ancre-livre"></div>',$ancre);
 	echo '<div class="col-image">';
 		if($annee) {
 			printf('<span class="annee has-%s-background-color">%s</span>',$couleur,$annee);

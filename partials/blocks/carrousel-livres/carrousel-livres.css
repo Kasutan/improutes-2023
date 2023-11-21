@@ -44,9 +44,16 @@
 }
 .carrousel-livres .texte {
   color: var(--marron);
+  display: block;
   font-size: 2.4rem;
   font-weight: 700;
   text-align: center;
+}
+.carrousel-livres a.texte {
+  text-decoration: none;
+}
+.carrousel-livres a.texte:hover, .carrousel-livres a.texte:focus {
+  text-decoration: underline;
 }
 .carrousel-livres .owl-carousel {
   position: relative;
