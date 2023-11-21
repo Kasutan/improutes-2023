@@ -225,7 +225,8 @@ function kasutan_fil_ariane() {
 	elseif (is_tag()) :  //archives tags d'articles
 		echo '<span class="current">'.strip_tags(single_tag_title( '', false )).'</span>';
 	elseif (is_home()) :
-		echo '<span class="current">Actualités</span>';
+		$actus=get_option('page_for_posts'); //Traduit par PLL ✔️
+		echo '<span class="current">'.strip_tags(get_the_title($actus)).'</span>';
 	elseif (is_search()) :
 		echo '<span class="current">Recherche : '.get_search_query().'</span>';
 	elseif (is_404()) :
