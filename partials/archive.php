@@ -37,7 +37,6 @@ printf('<%s class="vignette">',$tag);
 			kasutan_cat_pour_filtre();
 		}
 
-		//TODO améliorer fallbacks ?
 		$infos_cat=array('nom'=>'Autres','couleur'=>'rouge');
 
 		if(function_exists('kasutan_get_cat_et_couleur')) {

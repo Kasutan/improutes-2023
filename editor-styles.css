@@ -463,26 +463,6 @@ textarea {
 .wp-block-group.alignfull .wp-block-columns {
   margin-bottom: 0;
 }
-.wp-block-group.bloc-bleu {
-  background-color: var(--bleu);
-  padding: 3rem;
-}
-.wp-block-group.bloc-bleu p, .wp-block-group.bloc-bleu h3, .wp-block-group.bloc-bleu h4 {
-  color: var(--blanc);
-}
-@media screen and (max-width: 781px) {
-  .wp-block-group.bloc-bleu {
-    width: 100vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: -1.8em;
-  }
-}
-@media screen and (max-width: 781px) and (min-width: 1920px) {
-  .wp-block-group.bloc-bleu {
-    width: var(--largeur-max);
-  }
-}
 .wp-block-group.coordonnees .has-big-font-size {
   font-size: 2rem;
 }
